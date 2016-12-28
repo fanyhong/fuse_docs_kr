@@ -8,7 +8,7 @@
 
 ## 범례 ##
 | | |
-|---|---|---|
+|---|---|
 | Ready	| 이 기능은 프로덕션 응용 프로그램을 사용할 준비가되었습니다. Ready로 표시된 기능에 문제가 발생하면 Fuse 팀은 버그 보고서를 신속하게 처리합니다. |
 | In progress | 이 기능은 적극적으로 작업 중입니다. |
 | Planned | 기능이 계획 중이고 곧 작업이 시작됩니다. |
@@ -19,7 +19,7 @@
 이 UX 컴포넌트는 교차 플랫폼 응용 프로그램 화면을 만들기 위한 기본 구성 요소입니다. 이러한 컴포넌트는 `Native` 모드와 `Graphics` 모드 모두에서 모든 테마에서 작동합니다. 버튼과 같은 특정 컨트롤의 모양과 느낌은 테마에 따라 다를 수 있습니다.
 
 | | 그래픽스 모드 | 네이티브 iOS | 네이티브 Android |
-|---|---|---|---|---|
+|---|---|---|---|
 | [Layout](https://www.fusetools.com/docs/layout/layout) - 앱 화면을위한 유연하고 반응이 빠른 레이아웃을 정의하십시오. | Ready | Ready | Ready |
 | [Image](https://www.fusetools.com/docs/fuse/controls/image) - 모든 화면 크기 및 밀도에 적응할 수 있도록 다중 밀도를 지원하는 이미지 및 아이콘을 표시합니다. | Ready | Ready | Ready |
 | [Video](https://www.fusetools.com/docs/fuse/controls/video) - 미디어 플레이어 또는 UI 디자인의 일부로 비디오를 재생하십시오. | Ready | Planned | Planned |
@@ -37,7 +37,7 @@
 해당 기능, 기능 및 모양은 플랫폼에 따라 다를 수 있습니다.
 
 | | iOS | 안드로이드 |
-|---|---|---|---|
+|---|---|---|
 | [WebView](https://www.fusetools.com/docs/fuse/controls/webview) - 앱에 브라우저를 표시하거나 HTML5를 사용하여 앱의 특정 부분을 만들 수 있습니다. | Ready | Ready |
 | [MapView](https://www.fusetools.com/docs/fuse/controls/mapview) - OS 네이티브 맵을 출력합니다. | Ready | Ready |
 | Native Pickers - 기본 OS 선택 도구, 날짜 선택 도구, 값 선택 도구 등을 표시합니다. | Planned | Planned |
@@ -48,7 +48,7 @@
 
 ## FuseJS 기능들 ###
 | | 네이티브 iOS | 네이티브 안드로이드 |
-|---|---|---|---|
+|---|---|---|
 | [Observable](https://www.fusetools.com/docs/fusejs/observable) - Reactive 데이터 바인딩 | Ready | Ready |
 | [XMLHttpRequest](https://www.fusetools.com/docs/fusejs/http) | Ready | Ready |
 | [fetch()](https://www.fusetools.com/docs/fusejs/http) | Ready | Ready |
@@ -61,6 +61,7 @@
 
 ## 네이티브 상호운용 ##
 퓨즈에는 네이티브 API, 기존 네이티브 코드 및 타사 SDK와 상호 작용할 수있는 여러 가지 방법이 있습니다.
+
 | | 네이티브 iOS | 네이티브 안드로이드 |
 |---|---|---|
 | Foreign Code - 네이티브 Java, Objective-C 및 C++ 코드를 Fuse 프로젝트에 직접 입력하고 새로운 기능을 FuseJS에 표시하십시오. | Ready | Ready |
