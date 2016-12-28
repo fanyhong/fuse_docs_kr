@@ -142,11 +142,7 @@ var hikes = [
 ```
 module.exports = hikes;
 ``` 
-그리고 그게 다야! 이제이 파일을 저장할 수 있으며 새 모듈을 사용할 준비가되었습니다.
-
-이제 뷰 코드로 돌아가십시오. 우리는이 파일에서 하이킹 배열을 옮겼으므로 새로운 모듈에서 가져올 필요가 있습니다. 이것은 실제로 매우 쉽게 할 수 있습니다. var Observable = require ( "FuseJS / Observable")를 기억하십시오. MainView.ux의 라인? 이것은 Fuse에게 FuseJS Observable 모듈을 가져오고 Observable이라는 이름으로 바인딩하도록합니다. 새로운 하이킹 모듈의 경우 거의 똑같은 작업을 수행합니다.
-
-그럼 끝입니다! 이 파일을 저장하면 이제 우리 모듈은 준비가 된겁니다.
+이제 다 된겁니다! 이 파일을 저장하면 이제 우리 모듈은 준비가 끝났습니다.
 이제 우리 뷰코드로 돌아가서, 우리가 이 파일의 밖으로 `hikes` 배열을 옮겼으므로 새 모듈을 import 할 필요가 있습니다. 이것은 사실 굉장히 쉽습니다. `MainView.ux` 에서의 `var Observable = require("FuseJS/Observable");` 라인을 기억하시나요? 이것은 Fuse가 FuseJS 의 Observable 모듈을 import 하고, `Observable` 이란 이름으로 바인딩하도록 합니다. 새로운 `hikes` 모듈의 경우 거의 똑같은 작업을 수행합니다.:
 ```
             var Observable = require("FuseJS/Observable");
