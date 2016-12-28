@@ -7,6 +7,7 @@
 ###### 최종업데이트: 2016년 8월 6일 ######
 
 ## 범례 ##
+
 | | |
 |---|---|
 | Ready	| 이 기능은 프로덕션 응용 프로그램을 사용할 준비가되었습니다. Ready로 표시된 기능에 문제가 발생하면 Fuse 팀은 버그 보고서를 신속하게 처리합니다. |
@@ -47,6 +48,7 @@
 | Android Material Design Navigation - Google에서 제공하는 Material Design 구성 요소 팩을 기반으로 기본 네비게이션 시스템을 만듭니다.  | N/A | Planned |
 
 ## FuseJS 기능들 ###
+
 | | 네이티브 iOS | 네이티브 안드로이드 |
 |---|---|---|
 | [Observable](https://www.fusetools.com/docs/fusejs/observable) - Reactive 데이터 바인딩 | Ready | Ready |
@@ -72,6 +74,7 @@
 ## 써드파티 라이브러리 래퍼 ##
 Fuse는 가장 인기있는 타사 SDK를 사용하기 쉬운 UX / JS API로 포장합니다. 많은 타사 JavaScript SDK를 즉시 사용할 수 있습니다.
 공식적으로 Fuse로 래핑되지 않은 SDK 및 API는 [Native Interop](https://www.fusetools.com/docs/native-interop/native-interop) 을 통해 계속 사용할 수 있습니다.
+
 | | iOS | 안드로이드 |
 |---|---|---|
 | Parse (JavaScript SDK) - cliend-side JS를 통해 앱의 데이터, 푸시 및 분석. | 그대로 동작함 | 그대로 동작함 |
@@ -80,6 +83,7 @@ Fuse는 가장 인기있는 타사 SDK를 사용하기 쉬운 UX / JS API로 포
 
 ## 실시간 그래픽스 효과들 ##
 실시간 그래픽 효과는 실시간으로 UI 요소에 GPU 효과를 적용하기 위해 퓨즈의 강력한 그래픽 모드를 이용합니다. 이를 통해 디자이너는 시각적 표현, 애니메이션 및 전환을 형성 할 수있는 새로운 가능성을 제공합니다.
+
 | | 그래픽스 모드 |
 |---|---|
 | Blur - 모든 UI 요소에 실시간 흐림을 적용합니다. | Ready |
@@ -93,6 +97,7 @@ Fuse는 가장 인기있는 타사 SDK를 사용하기 쉬운 UX / JS API로 포
 > GPU 효과에는 성능 비용이 있으며 모든 조합과 매개 변수가 모든 장치에 적합하지 않을 수 있습니다. 그러나 신중하게 적용된 모든 효과는 저가형 장치에서도 60 FPS로 처리 할 수 ​​있습니다. 덜 강력한 기기에서 앱을 사용 중지해야 할 수 있으므로 앱의 필수 기능에 효과를 사용하지 않는 것이 좋습니다.
 
 ## Fuse 도구들 ##
+
 | | 상태 |
 |---|---|
 | Fuse CLI Tools - Fuse 프로젝트들을 생성하고 빌드하고 미리보기하기 위한 `fuse` 커맨드 | Ready |
