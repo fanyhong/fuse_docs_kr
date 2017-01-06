@@ -155,8 +155,7 @@ module.exports = {
 };
 ```
 
-마지막으로 `HomePage.ux` 에서 참조를 업데이트합니다.
-Finally, we'll update the reference to it in HomePage.ux:
+마지막으로 `HomePage.ux` 에서 참조를 업데이트합니다.:
 
 ```
             <Each Items="{hikes}">
