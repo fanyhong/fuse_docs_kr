@@ -63,11 +63,11 @@
 
 ## [Router](https://www.fusetools.com/docs/fuse/navigation/router) 를 통한 라우팅 ##
 
-이제 우리는 [Navigator](https://www.fusetools.com/docs/fuse/controls/navigator) 와 템플릿을 사용하고 있으므로, [Navigator](https://www.fusetools.com/docs/fuse/controls/navigator) 에게 어느 [Page](https://www.fusetools.com/docs/fuse/controls/page) 를 탐색 할 것인지 알려줄 차례입니다. 이것은 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 가 등장하는 곳 입니다!
+이제 우리는 [Navigator](https://www.fusetools.com/docs/fuse/controls/navigator) 와 템플릿을 사용하고 있으므로, [Navigator](https://www.fusetools.com/docs/fuse/controls/navigator) 에게 어느 [Page](https://www.fusetools.com/docs/fuse/controls/page) 를 탐색 할 것인지 알려줄 차례입니다. 이제 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 가 등장 합니다!
 
-[Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 *라우팅* 을 관리합니다. 이 라우팅은 앱에서 어디로 이동할지 지정하고 실제 도착하게 하는 것을 포함합니다. 보다 구체적으로, [Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 우리가 탐색하고자 하는 일종의 "타겟"을 결정하는 *route* 를 사용하여 가능하면 추가 데이터까지 포함하는 해당 응용 프로그램을 탐색합니다. 라우팅에 참여할 컨트롤인 *router outlets* 를 찾기 위한 시각적 트리를 검색함으로써 실제 네비게이션을 수행합니다. 예를 들어, [PageControl](https://www.fusetools.com/docs/fuse/controls/pagecontrol) 과 [Navigator](https://www.fusetools.com/docs/fuse/controls/navigator) 는 모두 route outlets 입니다. [Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 이전에 있었던 경로의 내역을 추적 할 수 있으며 원하는 경우 다시 탐색 할 수 있습니다.
+[Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 *라우팅* 을 관리합니다. 이 라우팅은 앱에서 어디로 이동할지 지정하고 실제 도착하게 하는 것을 포함합니다. 보다 구체적으로, [Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 우리가 탐색하고자 하는 일종의 "타겟"을 결정하는 *route* 를 사용하여, 가능하면 추가 데이터까지 포함하는 해당 응용 프로그램을 탐색합니다. 라우팅에 참여할 컨트롤인 *router outlets* 를 찾기 위한 시각적 트리를 검색하는 것으로써, 실제 네비게이션을 수행합니다. 예를 들어, [PageControl](https://www.fusetools.com/docs/fuse/controls/pagecontrol) 과 [Navigator](https://www.fusetools.com/docs/fuse/controls/navigator) 는 모두 route outlets 입니다. [Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 이전에 있었던 경로의 내역을 추적 할 수 있으며 원하는 경우 다시 탐색 할 수 있습니다.
 
-이제 많은 것을 할 수 있습니다. 실제로 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 꽤 많은 일을 할 수 있고 매우 강력합니다! 사용하기 쉽고 직관적이기 때문에 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 에 앱을 추가하고 두 페이지를 탐색하는데 어떻게 사용할 수 있는지 보도록 하겠습니다.
+이제 많은 것을 할 수 있게 되었습니다. 실제로 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 는 꽤 많은 일을 할 수 있고 매우 강력합니다! 사용하기 쉽고 직관적이기 때문에 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 에 앱을 추가하고 두 페이지를 탐색하는데 어떻게 사용할 수 있는지 보도록 하겠습니다.
 
 우리가 할 첫 번째 일은 실제로 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 인스턴스를 생성하는 것입니다. 여기서는 전체 앱에 대해 하나의 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 만 필요합니다. 이것은 아주 일반적인 것입니다. 그래서 [Router](https://www.fusetools.com/docs/fuse/navigation/router) 를 `App` 클래스의 최상위에 추가 할 것입니다 :
 
@@ -119,7 +119,7 @@
     <Router ux:Name="router" />
 
     <ClientPanel>
-        <Navigator DefaultTemplate="home">
+        <Navigator DefaultPath="home">
             <HomePage ux:Template="home" router="router" />
 
             ...
@@ -211,7 +211,7 @@ function goToHike(arg) {
 그리고 `MainView.ux` 에서 우리는 그 디펜던시를 충족 시킬 것입니다 :
 
 ```
-        <Navigator DefaultTemplate="home">
+        <Navigator DefaultPath="home">
             <HomePage ux:Template="home" router="router" />
             <EditHikePage ux:Template="editHike" router="router" />
 ```
@@ -338,7 +338,7 @@ var hike = this.Parameter;
     <Router ux:Name="router" />
 
     <ClientPanel>
-        <Navigator DefaultTemplate="home">
+        <Navigator DefaultPath="home">
             <HomePage ux:Template="home" router="router" />
             <EditHikePage ux:Template="editHike" router="router" />
         </Navigator>
