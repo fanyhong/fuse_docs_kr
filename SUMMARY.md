@@ -1,4 +1,4 @@
-# Summary
+# Fuse 한글 번역
 
 * [Fuse 한글 번역](README.md)
 
