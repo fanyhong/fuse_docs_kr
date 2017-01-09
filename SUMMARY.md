@@ -4,6 +4,7 @@
 * [Introduction](README.md)
 
 ## Fuse 기본 사항
+* [Fuse 기본 사항들](a_Fuse Basics/00_Fuse_Basics.md)
 
 ## 튜토리얼
 
