@@ -29,7 +29,6 @@
 * [룩앤필 수정](b_Tutorial/06_Tweaking_the_look_and_feel.md)
 * [스플래시 화면](b_Tutorial/07_Splash_screen.md)
 * [결론](b_Tutorial/08_Final_thoughts.md)
--->
 
 ## 전체 레퍼런스
 
@@ -58,4 +57,6 @@
 ## Native interop \(Uno\)
 
 ## Technical corner
+
+-->
 
