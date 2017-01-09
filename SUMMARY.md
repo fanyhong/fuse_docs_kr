@@ -1,8 +1,6 @@
 # Summary
 
-## Fuse 한글 번역
-
-* [Introduction](README.md)
+* [Fuse 한글 번역](README.md)
 
 ## Fuse 기본 사항
 
