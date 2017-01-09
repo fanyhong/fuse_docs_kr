@@ -328,9 +328,13 @@ var hike = this.Parameter;
 
 이제 우리는 네비게이션으로 설정한 두 컴포넌트를 얻었고, 그들 사이에 데이터를 전달할 수 있습니다! 우리의 응용 프로그램은 현재 다음과 같습니다.:
 
-{% videoplayerscripts %}{% endvideoplayerscripts %}
+{% videoplayerscripts %}
 
 {% videoplayer id="docker-myvideo" width="640" height="480" posterExt="png" %} https://res.cloudinary.com/fusetools/image/upload/documentation_v2/7afd5d6af587ad4f2030099b91818d95__media/hikr/chapter-4/chapter-4.mp4 {% endvideoplayer %}
+
+{% endvideoplayerscripts %}
+
+
 
 [https://res.cloudinary.com/fusetools/image/upload/documentation_v2/7afd5d6af587ad4f2030099b91818d95__media/hikr/chapter-4/chapter-4.mp4](https://res.cloudinary.com/fusetools/image/upload/documentation_v2/7afd5d6af587ad4f2030099b91818d95__media/hikr/chapter-4/chapter-4.mp4)
 
