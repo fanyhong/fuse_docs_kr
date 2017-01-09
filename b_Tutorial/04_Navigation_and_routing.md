@@ -330,7 +330,7 @@ var hike = this.Parameter;
 
 {% videoplayerscripts %}{% endvideoplayerscripts %}
 
-{% videoplayer id="docker-myvideo" width="640" height="480" posterExt="png" %}https://res.cloudinary.com/fusetools/image/upload/documentation_v2/7afd5d6af587ad4f2030099b91818d95__media/hikr/chapter-4/chapter-4.mp4{% endvideoplayer %}
+{% videoplayer id="docker-myvideo" width="640" height="480" posterExt="png" %} https://res.cloudinary.com/fusetools/image/upload/documentation_v2/7afd5d6af587ad4f2030099b91818d95__media/hikr/chapter-4/chapter-4.mp4 {% endvideoplayer %}
 
 [https://res.cloudinary.com/fusetools/image/upload/documentation_v2/7afd5d6af587ad4f2030099b91818d95__media/hikr/chapter-4/chapter-4.mp4](https://res.cloudinary.com/fusetools/image/upload/documentation_v2/7afd5d6af587ad4f2030099b91818d95__media/hikr/chapter-4/chapter-4.mp4)
 
