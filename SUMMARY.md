@@ -3,11 +3,10 @@
 ## Fuse 한글 번역
 * [Introduction](README.md)
 
-## Fuse 기본 사항
-* [Fuse 기본 사항들](a_Fuse Basics/00_Fuse_Basics.md)
-* [](a_Fuse Basics/01_Supported_platforms.md)
-* [](a_Fuse Basics/02_Installation.md)
-* [](a_Fuse Basics/03_Quickstart.md)
+## [Fuse 기본 사항](a_Fuse Basics/00_Fuse_Basics.md)
+* [지원되는 플랫폼](a_Fuse Basics/01_Supported_platforms.md)
+* [설치](a_Fuse Basics/02_Installation.md)
+* [퀵 스타트](a_Fuse Basics/03_Quickstart.md)
 
 
 
