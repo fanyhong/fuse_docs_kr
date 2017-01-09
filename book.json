@@ -8,7 +8,7 @@
         "fontsettings": {
             "theme": 'white', // 'sepia', 'night' or 'white',
             "family": 'sans', // 'serif' or 'sans',
-            "size": 2         // 1 - 4
+            "size": 1         // 1 - 4
         }
     }
 }
