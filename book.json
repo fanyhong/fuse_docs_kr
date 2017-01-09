@@ -1,14 +1,8 @@
 {
     "plugins": [
-        "collapsible-menu"
-        ,"-highlight"
-        ,"-fontsettings"
+        "collapsible-menu",
+        "-highlight",
+        "-fontsettings",
+        "video"
     ]
-    ,"pluginsConfig": {
-        "fontsettings": {
-            "theme": 'night', // 'sepia', 'night' or 'white',
-            "family": 'sans', // 'serif' or 'sans',
-            "size": 1         // 1 - 4
-        }
-    }
 }
