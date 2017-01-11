@@ -25,11 +25,10 @@
 * [네비게이션 및 라우팅](b_Tutorial/04_Navigation_and_routing.md)
 * [모의 백엔드 만들기](b_Tutorial/05_Mocking_our_Backend.md)
 * [룩앤필 수정](b_Tutorial/06_Tweaking_the_look_and_feel.md)
-
-<!-- 
 * [스플래시 화면](b_Tutorial/07_Splash_screen.md)
 * [결론](b_Tutorial/08_Final_thoughts.md)
 
+<!-- 
 ## 전체 레퍼런스
 
 ## UX 마크업
