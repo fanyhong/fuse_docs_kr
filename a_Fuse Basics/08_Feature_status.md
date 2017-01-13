@@ -2,8 +2,11 @@
 원본: https://www.fusetools.com/docs/features
 
 # 특성 #
+
 베타 버전을 통해 진화하는 현재 및 미래의 Fuse 기능을 추적하십시오.
+
 > 이 목록은 완전한 것이 아니며 현재는 오래된 것입니다. 현재 진행중인 로드맵에 대한 의견을 교환하고 의견을 수집 할 수있는 새로운 전략을 결정 중입니다.
+
 ###### 최종업데이트: 2016년 8월 6일 ######
 
 ## 범례 ##
@@ -17,6 +20,7 @@
 | N/A | 이 기능은 대상 플랫폼이나 구성에 구현할 수 없거나 바람직하지 않습니다. |
 
 ## 크로스플랫폼 UX 컴포넌트 ##
+
 이 UX 컴포넌트는 교차 플랫폼 응용 프로그램 화면을 만들기 위한 기본 구성 요소입니다. 이러한 컴포넌트는 `Native` 모드와 `Graphics` 모드 모두에서 모든 테마에서 작동합니다. 버튼과 같은 특정 컨트롤의 모양과 느낌은 테마에 따라 다를 수 있습니다.
 
 | | 그래픽스 모드 | 네이티브 iOS | 네이티브 Android |
@@ -33,8 +37,10 @@
 | CameraFeed - 장치 카메라의 라이브 피드를 UI 요소로 표시합니다. | Planned | N/A | N/A |
 
 
-## 네이티브 UX 컴포넌트 ##
+## 네이티브 UX 컴포넌트들 ##
+
 이 UX 컴포넌트들은  Fuse에서 `Native` 테마, 또는 `NativeViewHost` 를 통해 사용할 수 있습니다. `Graphics` 테마에서는 사용할 수 없으며 Fuse 효과 시스템과 상호 작용할 수 없습니다.
+
 해당 기능, 기능 및 모양은 플랫폼에 따라 다를 수 있습니다.
 
 | | iOS | 안드로이드 |
@@ -62,6 +68,7 @@
 | WebSocket | In progress | In progress |
 
 ## 네이티브 상호운용 ##
+
 퓨즈에는 네이티브 API, 기존 네이티브 코드 및 타사 SDK와 상호 작용할 수있는 여러 가지 방법이 있습니다.
 
 | | 네이티브 iOS | 네이티브 안드로이드 |
@@ -72,6 +79,7 @@
 | [Uno Extension Layer (UXL)](https://www.fusetools.com/docs/technical-corner/uxl-handbook) - Uno와 네이티브 타겟 언어 사이에 고급 상호운용을 위한 낮은-수준의 다양한 메서드들 | Ready (삭제 예정) | Ready (삭제 예정) |
 
 ## 써드파티 라이브러리 래퍼 ##
+
 Fuse는 가장 인기있는 타사 SDK를 사용하기 쉬운 UX / JS API로 포장합니다. 많은 타사 JavaScript SDK를 즉시 사용할 수 있습니다.
 공식적으로 Fuse로 래핑되지 않은 SDK 및 API는 [Native Interop](https://www.fusetools.com/docs/native-interop/native-interop) 을 통해 계속 사용할 수 있습니다.
 
@@ -82,6 +90,7 @@ Fuse는 가장 인기있는 타사 SDK를 사용하기 쉬운 UX / JS API로 포
 | [SQLite Wrapper](https://github.com/bolav/fuse-sqlite) - 디바이스 내 로컬 데이터베이스를 래핑. 현재 구현은 서트파티에 의해 제공된것이며, 완전한 통합을 계획 중입니다. | Ready | Ready |
 
 ## 실시간 그래픽스 효과들 ##
+
 실시간 그래픽 효과는 실시간으로 UI 요소에 GPU 효과를 적용하기 위해 퓨즈의 강력한 그래픽 모드를 이용합니다. 이를 통해 디자이너는 시각적 표현, 애니메이션 및 전환을 형성 할 수있는 새로운 가능성을 제공합니다.
 
 | | 그래픽스 모드 |
@@ -109,6 +118,7 @@ Fuse는 가장 인기있는 타사 SDK를 사용하기 쉬운 UX / JS API로 포
 | Fuse Profiler - UX 마크 업 노드의 실시간 성능 데이터를 시각화하여 UI 성능 병목 현상을 쉽게 식별 할 수 있습니다. | Planned |
 
 ## 뭔가 놓친것이 있습니까? ##
-우리의 기능 로드맵에 없지만 당신이 있어야 한다고 느끼는 뭔가가 있다면, 부끄러워하지말고 [기능 요청](https://www.fusetools.com/community/forums/feature_requests) 을 통해 우리에게 알려주세요. 우리는 여러분 의견을 더 듣는것을 기쁘게 생각합니다. 
+
+우리의 기능 로드맵에 없지만 당신이 있어야 한다고 느끼는 뭔가가 있다면, 부끄러워하지말고 [기능 요청](https://www.fusetools.com/community/forums/feature_requests) 을 통해 우리에게 알려주십시오. 우리는 여러분 의견을 더 듣는것을 기쁘게 생각합니다. 
 
 ---

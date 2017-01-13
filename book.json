@@ -1,9 +1,7 @@
 {
     "plugins": [
         "collapsible-menu",
-        "-highlight",
-        "-fontsettings",
-        "video",
-        "videoplayer"
+        "highlight",
+        "fontsettings"
     ]
 }
