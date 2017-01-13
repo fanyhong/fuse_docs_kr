@@ -1,9 +1,13 @@
 # Summary
 
 ## Fuse 한글 번역
+
 * [Fuse 한글 번역](README.md)
 
+---
+
 ## Fuse 기본 사항
+
 * [Fuse 기본 사항](a_Fuse Basics/00_Fuse_Basics.md)
 * [지원되는 플랫폼](a_Fuse Basics/01_Supported_platforms.md)
 * [설치](a_Fuse Basics/02_Installation.md)
@@ -15,7 +19,10 @@
 * [기능 개요](a_Fuse Basics/08_Feature_status.md)
 * [커뮤니티 패키지들](a_Fuse Basics/09_Community_packages.md)
 
+---
+
 ## 튜토리얼
+
 * [튜토리얼](b_Tutorial/00_Tutorial.md)
 * [하이킹 수정 뷰](b_Tutorial/01_Edit_Hike_view.md)
 * [멀티 하이킹](b_Tutorial/02_Multiple_hikes.md)
@@ -26,7 +33,10 @@
 * [스플래시 화면](b_Tutorial/07_Splash_screen.md)
 * [결론](b_Tutorial/08_Final_thoughts.md)
 
-<!-- 
+---
+
+&lt;!--
+
 ## 전체 레퍼런스
 
 ## UX 마크업
@@ -55,5 +65,5 @@
 
 ## Technical corner
 
--->
+--&gt;
 
