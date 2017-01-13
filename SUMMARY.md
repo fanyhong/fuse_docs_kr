@@ -4,8 +4,6 @@
 
 * [Fuse 한글 번역](README.md)
 
----
-
 ## Fuse 기본 사항
 
 * [Fuse 기본 사항](a_Fuse Basics/00_Fuse_Basics.md)
@@ -19,7 +17,6 @@
 * [기능 개요](a_Fuse Basics/08_Feature_status.md)
 * [커뮤니티 패키지들](a_Fuse Basics/09_Community_packages.md)
 
----
 
 ## 튜토리얼
 
@@ -33,9 +30,8 @@
 * [스플래시 화면](b_Tutorial/07_Splash_screen.md)
 * [결론](b_Tutorial/08_Final_thoughts.md)
 
----
 
-&lt;!--
+<!--
 
 ## 전체 레퍼런스
 
@@ -65,5 +61,5 @@
 
 ## Technical corner
 
---&gt;
+-->
 
