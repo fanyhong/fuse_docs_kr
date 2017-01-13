@@ -1,13 +1,12 @@
 # Fuse Docs 한글 번역 (비공식) #
 
-이 문서들은 [Fuse 공식 사이트](https://www.fusetools.com/docs/) 의 [Docs](https://www.fusetools.com/docs) 를 한글 번역한 문서들 입니다. 이 페이지들은 Fuse 측의 허락 없이, 개인적인 학습 및 사용을 목적으로 번역한 비공식 문서입니다.
+이 문서들은 [Fuse 공식 사이트](https://www.fusetools.com/) 의 [Docs](https://www.fusetools.com/docs) 를 한글 번역한 문서들 입니다. 이 페이지들은 Fuse 측의 허락 없이, 개인적인 학습 및 사용을 목적으로 번역한 비공식 문서입니다.
 
 > 알림: 가능한 원문을 그대로 직역하였기 때문에, 어색한 표현이 있을 수 있습니다. 그리고 원문이 수시로 업데이트 되고 있으므로, 번역된 문서와 항상 일치하지 않을 수 있습니다.
 
-## 관련 링크 ##
-
+- Fuse: https://www.fusetools.com/
 - Gitbooks: https://fanyhong.gitbooks.io/fuse_docs_kr/content/
-- Github: https://fanyhong.gitbooks.io/fuse_docs_kr/content/
+- Github: https://github.com/fanyhong/fuse_docs_kr
 
 # 목차 #
 
