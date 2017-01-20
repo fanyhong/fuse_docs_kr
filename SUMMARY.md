@@ -12,9 +12,9 @@
 * [퀵 스타트](a_Fuse_Basics/03_Quickstart.md)
 * [미리보기 및 내보내기](a_Fuse_Basics/04_Preview_and_export.md)
 * [컴포넌트 생성](a_Fuse_Basics/05_Creating_components.md)
-* [기능 미리보기](a_Fuse_Basics/06_Feature_overview.md)
+* [기능 개요](a_Fuse_Basics/06_Feature_overview.md)
 * [자주 묻는 질문](a_Fuse_Basics/07_FAQ.md)
-* [기능 개요](a_Fuse_Basics/08_Feature_status.md)
+* [기능 상태](a_Fuse_Basics/08_Feature_status.md)
 * [커뮤니티 패키지들](a_Fuse_Basics/09_Community_packages.md)
 
 
