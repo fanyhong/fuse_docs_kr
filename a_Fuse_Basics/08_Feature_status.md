@@ -71,7 +71,7 @@ Fuse에는 기존 네이티브 코드와 써드파티 SDK들이 네이티브 API
 
 |  | 네이티브 iOS | 네이티브 안드로이드 |
 | --- | --- | --- |
-| Foreign Code - 네이티브 Java, Objective-C 및 C++ 코드를 Fuse 프로젝트에 직접 입력하고 새로운 기능을 FuseJS에 표시하십시오. | Ready | Ready |
+| Foreign Code - 네이티브 Java, Objective-C 및 C++ 코드를 Fuse 프로젝트에 직접 넣고, FuseJS 의 새로운 기능으로 노출하십시오. | Ready | Ready |
 | Uno Inline Foreign Code - Uno 메소드를 네이티브 플랫폼 언어로 직접 구현하십시오: Java, Objective-C 또는 C++. | Ready | Ready |
 | Uno Native Foreign Bindings - Uno에서 직접 Android 및 iOS API를 일반 구문으로 호출 할 수 있습니다. | Ready \(삭제 예정\) | Ready \(삭제 예정\) |
 | [Uno Extension Layer \(UXL\)](https://www.fusetools.com/docs/technical-corner/uxl-handbook) - Uno와 네이티브 타겟 언어 사이에 고급 상호운용을 위한 낮은-수준의 다양한 메서드들 | Ready \(삭제 예정\) | Ready \(삭제 예정\) |
