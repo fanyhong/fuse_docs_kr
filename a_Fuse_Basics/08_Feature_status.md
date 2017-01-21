@@ -47,9 +47,9 @@
 | [MapView](https://www.fusetools.com/docs/fuse/controls/mapview) - OS 네이티브 맵들을 표시합니다. | Ready | Ready |
 | Native Pickers - 기본 OS 선택도구, 날짜 선택도구, 값 선택도구 등을 표시합니다. | Planned | Planned |
 | Native UI Controls - 기타 네이티브 컨트롤들과 위젯들. 모달 대화상자, 탭바 등을 다룹니다. 기본 기술이 준비되었을 때 게시할 세부 기능-목록 입니다. | In progress | In progress |
-| Audio - UX 마크 업 트리거의 일부로 사운드를 재생합니다. | Planned | Planned |
-| iOS Navigation - iOS 내장 네비게이터 컨트롤 및 네이티브 전환을 기반으로 네이티브 네비게이션 시스템을 만듭니다. | Planned | N/A |
-| Android Material Design Navigation - Google에서 제공하는 Material Design 구성 요소 팩을 기반으로 기본 네비게이션 시스템을 만듭니다. | N/A | Planned |
+| Audio - UX 마크 업 트리거들의 일부로 사운드를 재생합니다. | Planned | Planned |
+| iOS Navigation - iOS 내장 네비게이터 컨트롤들 및 네이티브 트랜지션들을 기반으로 네이티브 네비게이션 시스템을 만듭니다. | Planned | N/A |
+| Android Material Design Navigation - Google에서 제공하는 Material Design 컴포넌트 팩을 기반으로 기본 네비게이션 시스템을 만듭니다. | N/A | Planned |
 
 ## FuseJS 기능들
 
@@ -67,7 +67,7 @@
 
 ## 네이티브 상호운용
 
-퓨즈에는 네이티브 API, 기존 네이티브 코드 및 타사 SDK와 상호 작용할 수있는 여러 가지 방법이 있습니다.
+Fuse에는 기존 네이티브 코드와 써드파티 SDK들이 네이티브 API들과 상호 작용할 수 있는 여러 가지 방법들이 있습니다.
 
 |  | 네이티브 iOS | 네이티브 안드로이드 |
 | --- | --- | --- |
