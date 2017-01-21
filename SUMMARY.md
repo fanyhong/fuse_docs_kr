@@ -1,6 +1,6 @@
 # Summary
 
-* [[Fuse 한글 번역]](README.md)
+* [[ Fuse 한글 번역 ]](README.md)
 
 * [Fuse 기본 사항](a_Fuse_Basics/00_Fuse_Basics.md)
     * [지원되는 플랫폼](a_Fuse_Basics/01_Supported_platforms.md)
