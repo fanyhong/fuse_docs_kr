@@ -4,7 +4,7 @@
 
 * [Fuse 기본 사항](a_Fuse_Basics/00_Fuse_Basics.md)
     * [지원되는 플랫폼](a_Fuse_Basics/01_Supported_platforms.md)
-    * [설치](a_Fuse_Basics/02_Installation.md)
+        * [설치](a_Fuse_Basics/02_Installation.md)
     * [퀵 스타트](a_Fuse_Basics/03_Quickstart.md)
     * [미리보기 및 내보내기](a_Fuse_Basics/04_Preview_and_export.md)
     * [컴포넌트 생성](a_Fuse_Basics/05_Creating_components.md)
