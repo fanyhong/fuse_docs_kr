@@ -4,7 +4,7 @@
 
 Fuse 를 시작하고 실행하는 것은 매우 쉽습니다. 단지 몇 가지 설치가 필요합니다.
 
-우리는 항상 설치 과정을 실크처럼 매끄럽게하기 위해 열심히 노력하고 있지만, 여전히 가끔 문제가 발생 할 수 있습니다. 문제가 발생하면 [저희에게 알려주세요](https://www.fusetools.com/community/forums/bug_reports) !
+우리는 항상 설치 과정을 실크처럼 매끄럽게하기 위해 열심히 노력하고 있지만, 여전히 가끔 문제가 발생 할 수 있습니다. 문제가 발생하면 [저희에게 알려주십시오](https://www.fusetools.com/community/forums/bug_reports) !
 
 ---
 
