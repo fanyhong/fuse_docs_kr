@@ -25,10 +25,10 @@
 
 | | 그래픽스 모드 | 네이티브 iOS | 네이티브 Android |
 |---|---|---|---|
-| [Layout](https://www.fusetools.com/docs/layout/layout) - 앱 화면을위한 유연하고 반응이 빠른 레이아웃을 정의하십시오. | Ready | Ready | Ready |
-| [Image](https://www.fusetools.com/docs/fuse/controls/image) - 모든 화면 크기 및 밀도에 적응할 수 있도록 다중 밀도를 지원하는 이미지 및 아이콘을 표시합니다. | Ready | Ready | Ready |
-| [Video](https://www.fusetools.com/docs/fuse/controls/video) - 미디어 플레이어 또는 UI 디자인의 일부로 비디오를 재생하십시오. | Ready | Planned | Planned |
-| [Navigation](https://www.fusetools.com/docs/fuse/navigation/navigation) - 범용, 크로스 플랫폼 네비게이션 시스템으로 사용자 정의 제스처 기반 애니메이션 내비게이션을 앱의 어느 곳에나 추가 할 수 있습니다. | Ready | Ready | Ready |
+| [Layout](https://www.fusetools.com/docs/layout/layout) - 앱 화면들에 대해 유연한, 반응형 레이아웃을 정의합니다. | Ready | Ready | Ready |
+| [Image](https://www.fusetools.com/docs/fuse/controls/image) - 모든 화면 크기 및 밀도에 적용할 수 있도록 다중 밀도를 지원하는 이미지 및 아이콘을 표시합니다. | Ready | Ready | Ready |
+| [Video](https://www.fusetools.com/docs/fuse/controls/video) - 미디어 플레이어 또는 UI 디자인의 일부로 비디오를 재생합니다. | Ready | Planned | Planned |
+| [Navigation](https://www.fusetools.com/docs/fuse/navigation/navigation) - 범용 크로스 플랫폼 네비게이션 시스템으로, 커스텀 제스처-기반 애니메이션된 내비게이션을 앱의 어느 곳에나 추가 할 수 있도록 합니다. | Ready | Ready | Ready |
 | [TextEdit](https://www.fusetools.com/docs/fuse/controls/text) - 테마 나 스타일이없는 일반 텍스트 입력 필드. | Ready | Ready | Ready |
 | [TextInput](https://www.fusetools.com/docs/fuse/controls/textinput) - 테마의 Look & Feel로 장식 된 텍스트 입력 필드입니다. | Ready | Ready | Ready |
 | [Button](https://www.fusetools.com/docs/fuse/controls/button) - 기본 클릭 가능한 컨트롤. | Ready | Ready | Ready |
