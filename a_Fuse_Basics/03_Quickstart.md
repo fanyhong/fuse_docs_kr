@@ -60,7 +60,7 @@ USB 연결은 해당 디바이스에 미리보기 앱을 처음으로 빌드하�
 
 만약 프로젝트에서 네이티브코드 (Uno, Java 또는 Objective-C)를 변경 하거나 컴퓨터의 IP 주소를 변경하면, USB 케이블을 다시 연결하고 `fuse preview` 명령을 다시 실행해야 합니다.
 
-## UX 마크업로 작업하기 ##
+## UX 마크업으로 작업하기 ##
 
 텍스트 에디터 에서 .ux 파일을 열고, 내부의 마크 업을 살펴 볼 시간입니다. 구문 강조 및 자동 완성을 위해 [Fuse 플러그인](https://www.fusetools.com/docs/basics/installation/sublime-plugin) 과 함께 [Sublime Text 3](https://www.sublimetext.com/3) 을 사용하는 것을 추천 합니다.
 

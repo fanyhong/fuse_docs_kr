@@ -18,13 +18,13 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 
 ## 내부 로직 ##
 
-컴포넌트들은 컴포넌트의 내부 비즈니스로직을 관리하는 [자바스크립트](https://www.fusetools.com/docs/fuse/reactive/javascript) 태그들을 포함될 수 있습니다.
+컴포넌트들은 컴포넌트의 내부 비즈니스로직을 관리하는 [자바스크립트](https://www.fusetools.com/docs/fuse/reactive/javascript) 태그들을 포함할 수 있습니다.
 
 ## 디펜던시 (ux:Dependency) ##
 
 컴포넌트들이 작업 환경에서 어떤 오브젝트들 이나 서비스들에 액세스를 요청하는 경우가 종종 있습니다. 예를 들어, 컴포넌트가 [App](https://www.fusetools.com/docs/fuse/app) 의 [라우터](https://www.fusetools.com/docs/fuse/navigation/router) 에 액세스를 요청 할 수 있습니다.
 
-우리는 다음과 같이 `ux : Dependency` 속성을 사용함으로써, 컴포넌트에서 디펜던시를 선언 할 수 있습니다.
+다음과 같이 우리 컴포넌트에서 `ux:Dependency` 속성을 사용하여 디펜던시를 선언 할 수 있습니다.
 
 ```
 <Panel ux:Class="MyBackButton" Clicked="{clicked}">
@@ -41,11 +41,11 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </Panel>
 ```
 
-위의 예는 `router` 와 `panel`, 두 디펜던시들을 선언합니다. 컴포넌트가 클릭되면, 라우터의 `.goBack()`이 사용 될 것입니다. `panel` 이라는 패널은 컴포넌트가 눌려진 동안, 반투명으로 페이드 될 것입니다.
+위의 예는 `router` 와 `panel`, 두 디펜던시들을 선언합니다. 위 컴포넌트가 클릭될 때, `router` 는 `.goBack()` 이 사용 될 것입니다. `panel` 이라는 패널은 컴포넌트가 눌려진 동안, 반투명으로 페이드 될 것입니다.
 
-디펜던시는 Uno의 생성자 인수들과 동일하며, `readonly` 필드들에 저장됩니다. 이것은 해당 오브젝트가 항상 초기화시에 항상 알려지고, 절대 변경되지 않음을 의미하기 때문에, 우리는 [JavaScript](https://www.fusetools.com/docs/fuse/reactive/javascript) 나 부여된 이름 `Change` 같은 애니메이터들에서, 직접적으로 해당 오브젝트를 안전하게 사용할 수 있습니다.
+디펜던시들은 Uno의 생성자 인수들과 동일하며, `readonly` 필드들에 저장됩니다. 이것은 해당 오브젝트가 초기화시에 항상 알려지고, 절대 변경되지 않음을 의미하기 때문에, 우리는 [JavaScript](https://www.fusetools.com/docs/fuse/reactive/javascript) 혹은 `Change` 같은 이름 붙여진 애니메이터들 에서, 직접적으로 해당 오브젝트를 안전하게 사용할 수 있습니다.
 
-디펜던시들이 있는 컴포넌트를 인스턴스화 할 때, 각 디펜던시(즉, 디펜던시 주입) 에 대한 오브젝트들을 제공해야 합니다. 그렇지 않으면, 보통 컴파일시 에러가 발생됩니다.
+디펜던시들을 포함한 컴포넌트를 인스턴스화 할 때, 각 디펜던시(즉, 디펜던시 주입) 에 대한 오브젝트들을 제공해야 합니다. 그렇지 않으면 컴파일시 에러가 발생됩니다.
 
 ```
 <App>
@@ -55,11 +55,11 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </App>
 ```
 
-컴포넌트는 디펜던시들에 대한 기본값을 제공 할 수 없습니다.
+컴포넌트는 해당 디펜던시들에 대한 초기값을 제공 할 수 없습니다.
 
 ### 디펜던시 상속 ###
 
-여러분이 하위 클래스화 할때, 디펜던시는 전달되지 않습니다. 따라서, 여러분이 하위 클래스화 하는 클래스에 수동으로 전달해야 합니다.
+여러분이 하위 클래스화 할때, 디펜던시는 전달되지 않습니다. 따라서, 여러분이 하위 클래스화 하는 클래스에 그것들을 수동으로 전달해야 합니다.
 
 ```
 <Page ux:Class="A">
@@ -72,7 +72,7 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 
 ## 속성 (ux:Property) ##
 
-속성들은 디펜던시들과 비슷하지만, 변경이 가능(변경 가능, 애니메이션 가능) 하고, 해당 컴포넌트는 기본값 제공이 가능하며, 해당 속성은 속성 바인딩을 사용하여 *property-bound* 를 될 수 있습니다.
+속성들은 디펜던시들과 비슷하지만, 변경이 가능(변경 가능, 애니메이션 가능) 하고, 해당 컴포넌트는 초기값 제공이 가능하며, 해당 속성은 속성 바인딩을 사용하여 *property-bound*  될 수 있습니다.
 
 ```
 <Panel ux:Class="MyButton" BackgroundColor="#f00">
@@ -82,9 +82,9 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </Panel>
 ```
 
-위의 예에서, 해당 컨트롤은 `BackgroundColor` 라는 새 속성을 정의하며, 기본값은 (루트 노드에 설정된) `#f00` 을 가집니다. 그런 다음, 이 색은 둥근 모서리를 가진 배경 사각형의 `Color` 속성에 property-bound 됩니다.
+위의 예에서, 해당 컨트롤은 `BackgroundColor` 라는 새 속성을 정의하며, 초기값은 (루트 노드에 설정된) `#f00` 을 가집니다. 그런 다음, 이 색은 둥근 모서리를 가진 배경 사각형의 `Color` 속성에 property-bound 됩니다.
 
-컴포넌트가 인스턴스화되면, 사용자는 기본 `BackgroundColor` 를 그대로 두거나, 새로 설정할 수 있습니다.
+컴포넌트가 인스턴스화되면, 사용자는 초기 `BackgroundColor` 를 그대로 두거나, 새로 설정할 수 있습니다.
 
 ```
 <MyButton />  <!-- this one will keep the default color -->
@@ -100,11 +100,11 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </WhilePressed>
 ```
 
-디펜던시들 대신 속성을 사용하는 단점은 속성이 변경 가능하다는 것이며, 속성으로 전달된 *오브젝트들*은, 예를 들자면 `<Change>` 애니메이터들 처럼 이름 붙여진 UX 마크업에서 참조될 수 없다는 것입니다.
+디펜던시들 대신 속성들을 사용하는 단점은 속성들이 변경 가능하다는 것이며, 속성들로써 전달된 *오브젝트들* 은 이름으로 UX 마크업에서 참조될 수 없다는 것입니다. (예: `<Change>` 애니메이터들에서)
 
-속성들은 JavaScript 에서 명명된 오브젝트들로 직접 사용하는 것이 불가능 하며, 모듈의 루트 범위에 있는 `this` 오브젝트의 `Observable` 속성들로는 사용 가능합니다.
+속성들은 JavaScript 에서 이름 붙여진 오브젝트들로 직접 사용할 수 없으며, 모듈의 루트 스코프(범위)에 있는 `this` 오브젝트의 `Observable` 속성들로는 사용 가능합니다.
 
-다음은 JavaScript의 속성 변경에 반응하는 방법 중 하나의 예입니다:
+다음은 JavaScript 에서 속성 변경들에 반응하기 위한 방법 중 하나의 예입니다:
 
 ```
 <Panel ux:Class="RgbDisplayer" RGB="#A00">
@@ -124,7 +124,7 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 
 ## 속성을 통한 observables 전달 ##
 
-Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 될 수 있습니다. `object` 속성을 만들어, Observables 를 받아 들이는 속성을 추가 할 수 있습니다 :
+Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 될 수 있습니다. 우리는 `object` 속성을 만들어, Observables 를 받아 들이는 속성을 추가 할 수 있습니다 :
 
 ```
 <Panel ux:Class="CoolPanel">
@@ -142,7 +142,7 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 <CoolPanel ObservableProperty="{valueToPass}" />
 ```
 
-대부분의 경우 속성들을 통해 전달된 Observable 을 가져 올 때, `inner ()` 를 사용하고자 할 것입니다. 이는 자바스크립트 값 `this.Propertyname` 이, `Propertyname` 이 무엇을 포함하던 간에, 하나의 observable 이기 때문입니다. Observable을 전달하면, `this.Propertyname` 은 우리가 생각했던 그 observable 로 하나의 observable 을 포함 할 것입니다.
+대부분의 경우 속성들을 통해 전달된 Observable 을 가져 올 때, `inner()` 를 사용하고자 할 것입니다. 이는 자바스크립트 값 `this.Propertyname` 이, `Propertyname` 이 무엇을 포함하던 간에 하나의 observable 이기 때문입니다. Observable을 전달하면, `this.Propertyname` 은 우리가 생각했던 그 observable 로 하나의 observable 을 포함 할 것입니다.
 
 ## 속성을 통한 파일 참조 전달 ##
 
