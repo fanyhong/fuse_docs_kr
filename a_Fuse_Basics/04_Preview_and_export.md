@@ -19,15 +19,15 @@ Windows 에서 실행하는 경우, 장치에 적합한 USB 드라이버를 설�
 
 ## iOS 설정 ## 
 
- iOS로 앱을 미리보기 하거나 내보내려면, Mac OS X 와 [Xcode](https://itunes.apple.com/en/app/xcode/id497799835) 가 필요합니다.
+iOS로 앱을 미리보기 하거나 내보내려면, Mac OS X 와 [Xcode](https://itunes.apple.com/en/app/xcode/id497799835) 가 필요합니다.
 
- 무료 Apple Developer 계정을 만들고, 아래 보이는 것 같이 Xcode 설정으로 계정 등록도 해야 합니다.
+무료 Apple Developer 계정도 만들어 아래와 같이 Xcode 설정에 등록 해야 합니다.
 
 ![Alt text](https://res.cloudinary.com/fusetools/image/upload/w_450%2Ch_450%2Cdpr_1.0%2Cc_limit/documentation_v2/401edb6f22e77628712f87ecc5b4bde4__media/preview-and-export-xcode-add-apple-id.webp)
 
 ## 미리보기 ##
 
-로컬 및 Android/iOS 장치에서 앱을 쉽게 미리보기 할 수 있으며, UX 마크 업과 JavaScript 의 변경 사항에 대한 즉각적인 피드백을 얻을 수 있습니다.
+로컬 및 Android/iOS 디바이스들에서 앱들을 쉽게 미리보기 할 수 있으며, 미리보기 되는 동안 여러분이 UX 마크업과 JavaScript 를 변경하면 즉각적인 피드백을 얻을 수 있습니다.
 
 ### Fuse 대시보드를 통한 미리보기 ###
 
@@ -56,14 +56,14 @@ sublime text 에서 미리보기를 하기 위해서는, 사이드바에 있는 
 ```
 fuse preview -t=Android
 fuse preview -t=iOS
-fuse preview -t=Local   # The -t=Local flag is optional in this case
+fuse preview -t=Local   # 이 경우 -t=Local 이 생략되어도 동일하게 동작합니다.
 ```
 
 `fuse help preview` 를 실행하여, `fuse preview` 관련 문서를 얻을 수 있습니다.
 
 ## 내보내기 ##
 
-앱을 내보낼 때 UX 마크 업은 기본 C++ 코드로 컴파일되므로, 앱을 실시간으로 미리 볼 수 없게 됩니다. 그러나 여러분의 앱은 컴퓨터에 다시 네트워크 연결할 필요없이 자체적으로 동작합니다. 앱 배포시, 여러분이 원하는 방식에 해당합니다.
+앱을 내보내기할 때 UX 마크업은 네이티브 C++ 코드로 컴파일되므로, 앱을 실시간으로 미리 볼 수 없게 됩니다. 그러나 여러분의 앱을 여러분 컴퓨터에 다시 네트워크 연결할 필요없이 자체적으로 동작할 것입니다. 이게 앱 배포시 여러분이 원하는 방식입니다.
 
 ### Android ###
 

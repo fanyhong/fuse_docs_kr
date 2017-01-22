@@ -2,7 +2,7 @@
 
 # 컴포넌트 생성 #
 
-UX 마크 업은 기존의 컴포넌트들을 결합하여, 보다 새로운 복잡한 컴포넌트들을 만들기 위한 구성이 가능한 선언적 언어입니다. UX 마크업 요소들의 모든 트리는 `ux:Class` 속성을 사용함으로써, 쉽게 컴포넌트로 변환 될 수 있습니다.
+UX 마크업은 기존의 컴포넌트들을 결합하여, 보다 새로운 복잡한 컴포넌트들을 만들기 위한 구성이 가능한 선언적 언어입니다. UX 마크업 요소들의 모든 트리는 `ux:Class` 속성을 사용함으로써, 쉽게 컴포넌트로 변환 될 수 있습니다.
 
 Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 권장합니다:
 
@@ -10,21 +10,21 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 - 재사용이 가능합니다. 다양한 곳에서 UI 및 로직을 재사용 할 수 있도록 해주는 컴포넌트를 만들기 유용합니다.
 - 스타일링. 원시적인 것들에 기반한 새로운 클래스들을 만드는 것은, 프로젝트 전체에서 일관된 룩앤필(모양과 느낌) 을 만들기 위한 방법으로 추천됩니다.
 
-## 하위 클래스 ##
+## 하위 클래스화 하기 ##
 
-`ux:Class` 속성 자체는, 요소의 유형이 *기본 클래스* 인, 새로운 Uno 클래스를 만듭니다. 새로운 클래스는 하위 클래스의 모든 공용 속성들, 이벤트들 및 동작을 상속 받는 것을 의미합니다.
+`ux:Class` 속성은 자체적으로 요소의 타입이 *기본 클래스(base class)* 인 새로운 Uno 클래스를 만듭니다. 이는 새로운 클래스가 하위 클래스로부터 모든 공용 속성들, 이벤트들 및 동작을 상속 받는 것을 의미합니다.
 
 > UX 마크업에 대한 더 많은 정보는 [레퍼런스](https://www.fusetools.com/docs/ux-markup/ux-markup) 를 보십시오.
 
 ## 내부 로직 ##
 
-컴포넌트들은 컴포넌트의 내부 비즈니스로직을 관리하는 [자바스크립트](https://www.fusetools.com/docs/fuse/reactive/javascript) 태그들을 포함할 수 있습니다.
+컴포넌트들은 컴포넌트의 내부 비즈니스로직을 관리하는 [자바스크립트](https://www.fusetools.com/docs/fuse/reactive/javascript) 태그들을 포함하는 것이 가능합니다.
 
 ## 디펜던시 (ux:Dependency) ##
 
-컴포넌트들이 작업 환경에서 어떤 오브젝트들 이나 서비스들에 액세스를 요청하는 경우가 종종 있습니다. 예를 들어, 컴포넌트가 [App](https://www.fusetools.com/docs/fuse/app) 의 [라우터](https://www.fusetools.com/docs/fuse/navigation/router) 에 액세스를 요청 할 수 있습니다.
+컴포넌트들이 작업 환경에서 어떤 오브젝트들이나 서비스들에 액세스를 요청하는 경우가 종종 있습니다. 예를 들어, 컴포넌트가 [App](https://www.fusetools.com/docs/fuse/app) 의 [라우터](https://www.fusetools.com/docs/fuse/navigation/router) 에 액세스를 요청 할 수 있습니다.
 
-다음과 같이 우리 컴포넌트에서 `ux:Dependency` 속성을 사용하여 디펜던시를 선언 할 수 있습니다.
+다음과 같이 우리 컴포넌트에서 `ux:Dependency` 속성을 사용하여 디펜던시를 선언할 수 있습니다.
 
 ```
 <Panel ux:Class="MyBackButton" Clicked="{clicked}">
@@ -41,11 +41,11 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </Panel>
 ```
 
-위의 예는 `router` 와 `panel`, 두 디펜던시들을 선언합니다. 위 컴포넌트가 클릭될 때, `router` 는 `.goBack()` 이 사용 될 것입니다. `panel` 이라는 패널은 컴포넌트가 눌려진 동안, 반투명으로 페이드 될 것입니다.
+위의 예는 `router` 와 `panel`, 두 디펜던시들을 선언합니다. 위 컴포넌트가 클릭될 때, `router` 는 `.goBack()` 하기 위해 사용 될 것입니다. `panel` 이 더빙된 패널은 컴포넌트가 눌려진 동안, 반투명으로 페이드 될 것입니다.
 
-디펜던시들은 Uno의 생성자 인수들과 동일하며, `readonly` 필드들에 저장됩니다. 이것은 해당 오브젝트가 초기화시에 항상 알려지고, 절대 변경되지 않음을 의미하기 때문에, 우리는 [JavaScript](https://www.fusetools.com/docs/fuse/reactive/javascript) 혹은 `Change` 같은 이름 붙여진 애니메이터들 에서, 직접적으로 해당 오브젝트를 안전하게 사용할 수 있습니다.
+디펜던시들은 Uno의 생성자 인수들과 동일하고, `readonly` 필드들에 저장됩니다. 이것은 해당 오브젝트가 초기화시에 항상 알려지고 절대 변경되지 않을 것임을 의미하기 때문에, 우리는 [JavaScript](https://www.fusetools.com/docs/fuse/reactive/javascript) 혹은 `Change` 같이 이름 붙여진 애니메이터들에서, 직접적으로 해당 오브젝트를 안전하게 사용할 수 있습니다.
 
-디펜던시들을 포함한 컴포넌트를 인스턴스화 할 때, 각 디펜던시(즉, 디펜던시 주입) 에 대한 오브젝트들을 제공해야 합니다. 그렇지 않으면 컴파일시 에러가 발생됩니다.
+디펜던시들을 포함한 컴포넌트를 인스턴스화 할 때, 여러분은 각 디펜던시(즉, 디펜던시 주입) 에 대한 오브젝트들을 제공해야 합니다. 그렇지 않으면 컴파일시 에러가 발생됩니다.
 
 ```
 <App>
@@ -55,11 +55,11 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </App>
 ```
 
-컴포넌트는 해당 디펜던시들에 대한 초기값을 제공 할 수 없습니다.
+컴포넌트는 해당 디펜던시들에 대한 초기값 제공이 불가능합니다.
 
 ### 디펜던시 상속 ###
 
-여러분이 하위 클래스화 할때, 디펜던시는 전달되지 않습니다. 따라서, 여러분이 하위 클래스화 하는 클래스에 그것들을 수동으로 전달해야 합니다.
+여러분이 하위 클래스화 할때, 디펜던시들은 전달되지 않습니다. 따라서, 여러분이 하위 클래스화 하고 있는 기본클래스(baseclass)에 디펜던시들을 수동으로 전달해야 합니다.
 
 ```
 <Page ux:Class="A">
@@ -82,7 +82,7 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </Panel>
 ```
 
-위의 예에서, 해당 컨트롤은 `BackgroundColor` 라는 새 속성을 정의하며, 초기값은 (루트 노드에 설정된) `#f00` 을 가집니다. 그런 다음, 이 색은 둥근 모서리를 가진 배경 사각형의 `Color` 속성에 property-bound 됩니다.
+위의 예에서, 해당 컨트롤은 `BackgroundColor` 라는 새 속성을 정의하며 초기값은 (루트 노드에 설정된) `#f00` 을 가집니다. 그런 다음, 이 색은 둥근 모서리를 가진 배경 사각형의 `Color` 속성에 property-bound 됩니다.
 
 컴포넌트가 인스턴스화되면, 사용자는 초기 `BackgroundColor` 를 그대로 두거나, 새로 설정할 수 있습니다.
 
@@ -100,7 +100,7 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </WhilePressed>
 ```
 
-디펜던시들 대신 속성들을 사용하는 단점은 속성들이 변경 가능하다는 것이며, 속성들로써 전달된 *오브젝트들* 은 이름으로 UX 마크업에서 참조될 수 없다는 것입니다. (예: `<Change>` 애니메이터들에서)
+디펜던시들 대신 속성들을 사용하는 단점은, 속성들이 변경 가능하다는 점 때문에 속성들로써 전달된 *오브젝트들* 은 UX 마크업에서 이름으로 참조될 수 없다는 것입니다. (예: `<Change>` 애니메이터들)
 
 속성들은 JavaScript 에서 이름 붙여진 오브젝트들로 직접 사용할 수 없으며, 모듈의 루트 스코프(범위)에 있는 `this` 오브젝트의 `Observable` 속성들로는 사용 가능합니다.
 
@@ -142,11 +142,11 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 <CoolPanel ObservableProperty="{valueToPass}" />
 ```
 
-대부분의 경우 속성들을 통해 전달된 Observable 을 가져 올 때, `inner()` 를 사용하고자 할 것입니다. 이는 자바스크립트 값 `this.Propertyname` 이, `Propertyname` 이 무엇을 포함하던 간에 하나의 observable 이기 때문입니다. Observable을 전달하면, `this.Propertyname` 은 우리가 생각했던 그 observable 로 하나의 observable 을 포함 할 것입니다.
-
+대부분의 경우 속성들을 통해 전달 받은 Observable 을 가져올 때, `inner()` 를 사용하고자 할 것입니다. 이는 `Propertyname` 이 무엇을 포함하던 간에 자바스크립트 값 `this.Propertyname` 은 하나의 observable 이기 때문입니다. 우리가 Observable을 하나 전달하면, `this.Propertyname` 은 우리가 전달했던 그 observable 인 observable 하나를 포함 할 것입니다.
+ 
 ## 속성을 통한 파일 참조 전달 ##
 
-파일에 대한 참조를 컴포넌트로 전달하려는 경우가 있습니다. 예를 들면 이미지 또는 비디오를 우리 컴포넌트에 포함시킬때 입니다. 우리는 `FileSource` 유형의 속성을 생성 한 다음, `Image` 또는 `Video` 파일의 `File` 속성을 그것에 property-bind 함으로써, 이 작업을 수행 할 수 있습니다. 그런 다음 클래스를 인스턴스화 할 때, 그것들의 이름으로 로컬 파일을 참조 할 수 있습니다.:
+파일에 대한 참조를 컴포넌트로 전달하려는 경우가 있습니다. 예를 들면 이미지 또는 비디오를 우리 컴포넌트에 포함시킬때 입니다. 우리는 `FileSource` 타입의 속성들을 생성 한 뒤 우리 `Image` 또는 `Video` 파일의 `File` 속성을 그것에 property-bind 함으로써, 이 작업을 수행 할 수 있습니다. 그런 다음 클래스를 인스턴스화 할 때, 그것들의 이름으로 로컬 파일을 참조 할 수 있습니다.:
 
 ```
 <App>
@@ -167,11 +167,11 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 
 ## 템플릿 (ux:Template) ##
 
-템플릿은 외형에 사용되는 커스텀 요소들을 가져오도록 함으로써, 컴포넌트의 커스터마이징을 향상시키기 위해 사용됩니다. 예를 들어, [PageIndicator](https://www.fusetools.com/docs/fuse/controls/pageindicator) 요소는 `PageControl` 의 각 페이지에 대한 템플릿에서 요소를 생성합니다. 요소는 `ux:Template` 속성을 해당 템플릿을 식별 할 키로 설정하여 템플릿으로 만듭니다. 이 키는 사용 할 템플릿을 찾을 때, 템플릿을 자식요소로 허용하는 요소들에 사용됩니다.
+템플릿들은 외형에 사용되는 커스텀 요소들을 가져와 컴포넌트의 커스터마이징을 향상시키기 위해 사용됩니다. 예를 들어, [PageIndicator](https://www.fusetools.com/docs/fuse/controls/pageindicator) 요소는 `PageControl` 의 각 페이지에 대한 템플릿에서 요소를 생성합니다. 요소는 `ux:Template` 속성을 해당 템플릿을 식별할 키로 설정하여 템플릿으로 만듭니다. 이 키는 사용 할 템플릿을 찾을 때 템플릿을 자식요소로 허용하는 요소들에 사용됩니다.
 
-템플릿은 `Each` 를 사용하여 그려집니다. `Each` 는 `TemplateSource` 라는 속성을 가지고 있습니다. 이 속성은 `Each` 가 템플릿을 가져 오는 요소를 지정합니다. 앞서 언급했듯이, 템플릿은 키를 사용하여 자신을 식별합니다. 가능한 경우, `TemplateKey` 속성은 `Each` 가 사용 할 템플릿이 무엇인지를 지정합니다.
+템플릿은 `Each` 를 사용하여 그려집니다. `Each` 는 `TemplateSource` 라는 속성을 가지고 있습니다. 이 속성은 `Each` 가 템플릿을 가져 오는 요소를 지정합니다. 앞서 언급했듯이, 템플릿은 키를 사용하여 자신을 식별합니다. 가능하면 해당 `TemplateKey` 속성은 `Each` 가 사용 해야 하는 템플릿이 어떤 것인지를 지정합니다.
 
-`Each` 는 부모 클래스 (`CoolRepeater`) 에서 키를 찾아야 하기 때문에, `TemplateSource = "this"` 를 설정합니다.:
+`Each` 는 부모 클래스 (`CoolRepeater`) 에서 키를 찾아야 하기 때문에, `TemplateSource="this"` 를 설정합니다.:
 
 ```
 <StackPanel ux:Class="CoolRepeater" Background="#FAD">
@@ -181,7 +181,7 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 </StackPanel>
 ```
 
-이 템플릿은 20번 반복 되는 템플릿을 허용하는 커스텀 컴포넌트 입니다. 템플릿이 주어지지 않으면, `Each` 안에 무엇이 있던 간에, `Each`는 기본 템플릿으로 대체 될 것입니다. 그런 다음 커스텀 컴포넌트를 다음과 같이 사용할 수 있습니다.
+이 템플릿은 20번 반복 되는 템플릿을 허용하는 커스텀 컴포넌트 입니다. 템플릿이 주어지지 않으면, `Each` 안에 무엇이 있던 간에 `Each`는 기본 템플릿으로 대체될 것입니다. 그런 다음 커스텀 컴포넌트를 다음과 같이 사용할 수 있습니다.
 
 ```
 <CoolRepeater>
@@ -191,9 +191,9 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 
 ## 이벤트 (UserEvent) ##
 
-우리 컴포넌트가 메시지를 외부 세계로 전달하기 원하는 많은 경우가 있습니다. 이를 위해 UX 및 JavaScript 에서 이벤트를 발생시키고 처리 할 수 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 사용할 수 있습니다.
+우리 컴포넌트가 메시지를 외부 세계로 전달하기 원하는 경우가 많습니다. 이를 위해 UX 및 JavaScript 에서 우리가 이벤트를 발생시키고 처리 할 수 있도록 하는 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 사용할 수 있습니다.
 
-우리는 특정 이벤트를 발생시킬 수 있음을 나타내기 위해, 컴포넌트 클래스의 루트에 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 두었습니다. 우리가 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 배치한 위치는, 그것이 붙어있는 해당 노드와 그 자식요소만 이벤트를 발생시키거나 처리 할 수 ​​있기 때문에, 중요합니다.
+우리는 특정 이벤트를 발생시킬 수 있음을 나타내기 위해, 컴포넌트 클래스의 루트에 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 두었습니다. 우리가 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 배치하는 위치는 그것이 붙어있는 해당 노드와 그 자식요소만 이벤트를 발생시키거나 처리 할 수 ​​있기 때문에 중요합니다.
 
 ```
 <Panel ux:Class="MyComponent">
@@ -203,7 +203,7 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 
 이것은 `myEvent` 라는 이벤트를 생성합니다.
 
-> 참고: 앱의 어디에서나 발생하거나 처리 할 수있는 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 만들려면, 다음과 같이 루트 [App](https://www.fusetools.com/docs/fuse/app) 노드에 선언하십시오.:
+> 참고: 앱의 어디에서나 발생되거나 처리 될 수있는 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 만들려면, 다음과 같이 루트 [App](https://www.fusetools.com/docs/fuse/app) 노드에 선언하십시오.:
 
 ```
 <App>
@@ -212,7 +212,7 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 </App>
 ```
 
-우리는 이제 UX에서 이벤트를 발생시키기 위해 [RaiseUserEvent](https://www.fusetools.com/docs/fuse/triggers/actions/raiseuserevent) 를 사용할 수 있습니다.
+우리는 이제 UX로부터 이벤트를 발생시키기 위해 [RaiseUserEvent](https://www.fusetools.com/docs/fuse/triggers/actions/raiseuserevent) 를 사용할 수 있습니다.
 
 ```
 <Panel ux:Class="MyComponent">
@@ -250,7 +250,7 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 
 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 는 비록 현재 스코프의 외부에서 선언되었지만, 우리는 이름으로 참조하고 있습니다. `EventName` 이 이벤트의 `Name`을 참조하므로 이 작업을 수행 할 수 있습니다. [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 의 실제 인스턴스는 런타임에 결정 될 것입니다.
 
-JavaScript로 이벤트를 처리 할 수도 있습니다.
+JavaScript에서 이벤트들을 처리 할 수도 있습니다.
 
 ```
 <JavaScript>
