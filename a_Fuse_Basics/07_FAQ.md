@@ -41,7 +41,7 @@ Fuse 및 내보내기가 지원되는 플랫폼 전체 목록은 [여기](https:
 
 ### 네트워크 에러 발생 ###
 
-이런 메시지를 받습니다. `fuse: A network error occurred: Could not resolve host '<your hostname>' Please check your network setup and try again.`
+이런 메시지를 얻습니다. `fuse: A network error occurred: Could not resolve host '<your hostname>' Please check your network setup and try again.`
 
 #### 해결책 ####
 
@@ -139,7 +139,7 @@ iOS 와 안드로이드 디바이스에서 미리보기 하는 동안에, "Faile
 - Fuse가 최근에 설치된 경우 Sublime을 다시 시작해 봅니다.
 - Fuse가 올바른 경로에 있는지 확인합니다. 터미널을 열고 `fuse --version` 을 실행한 뒤, fuse 버전이 출력되는지 확인합니다.
 - 이전 단계가 작동하지 않으면 로그아웃 했다가 다시 로그인해서 시도해 봅니다.
-- Fuse가 Sublime이나 명령 줄에서 여전히 발견되지 않고 Windows를 사용중인 경우 설치 프로그램이 `PATH` 환경 변수를 업데이트하지 못했을 수 있습니다. 일반적으로 `C:\Users\<your username>` 의 `<user directory>` 에 위치한 `PATH` 환경 변수에 `<user directory>\AppData\Local\Fusetools\Fuse\App\Bin` 를 [추가](http://www.computerhope.com/issues/ch000549.htm#windows8) 합니다.
+- Fuse가 Sublime이나 커맨드라인에서 여전히 발견되지 않고 Windows를 사용중인 경우 설치 프로그램이 `PATH` 환경 변수를 업데이트하지 못했을 수 있습니다. 일반적으로 `C:\Users\<your username>` 의 `<user directory>` 에 위치한 `PATH` 환경 변수에 `<user directory>\AppData\Local\Fusetools\Fuse\App\Bin` 를 [추가](http://www.computerhope.com/issues/ch000549.htm#windows8) 합니다.
 
 ---
 
@@ -181,7 +181,7 @@ iOS 와 안드로이드 디바이스에서 미리보기 하는 동안에, "Faile
 
 ## 버그 리포트하는 방법 ##
 
-버그를 발견했다고 생각하시는 분은 [포럼](https://www.fusetools.com/community/forums/bug_reports) 으로 버그 리포트를 보내 주시면 알려 주시면 감사하겠습니다. 문제에 대한 정보가 많을수록 문제를 쉽게 해결할 수 있습니다. 따라서 우리는 버그 보고서에 포함시켜야하는 작은 정보 목록을 작성했습니다.
+버그를 발견했다고 생각하시는 분은 [포럼](https://www.fusetools.com/community/forums/bug_reports) 으로 버그 리포트를 보내 주시면 알려 주시면 감사하겠습니다. 문제에 대한 정보가 많을수록 문제를 쉽게 해결할 수 있습니다. 따라서 우리는 여러분이 버그 리포트에 포함시켜야 하는 작은 정보 목록을 만들었습니다.
 
 1. 여러분이 사용하고 있는 Fuse 버전은 무엇입니까? 터미널에서 `fuse --version`을 실행한 출력을 복사해 주십시오.
 2. 여러분의 운영체제와 그것의 버전은 무엇입니까?

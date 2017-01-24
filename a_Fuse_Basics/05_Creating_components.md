@@ -7,12 +7,12 @@ UX 마크업은 기존의 컴포넌트들을 결합하여, 보다 새로운 복�
 Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 권장합니다:
 
 - 좋은 훈련이 됩니다. 컴포넌트 지향은 여러분 코드베이스를 깨끗하고, 테스트 가능하며, 확장가능하고, 유지보수하기 쉽게 유지하도록 합니다.
-- 재사용이 가능합니다. 다양한 곳에서 UI 및 로직을 재사용 할 수 있도록 해주는 컴포넌트를 만들기 유용합니다.
-- 스타일링. 원시적인 것들에 기반한 새로운 클래스들을 만드는 것은, 프로젝트 전체에서 일관된 룩앤필(모양과 느낌) 을 만들기 위한 방법으로 추천됩니다.
+- 재사용이 가능합니다. 다양한 곳에서 UI 및 로직을 재사용 할 수 있도록 컴포넌트를 만드는 것이 유용합니다.
+- 스타일링. 원시적인 것들에 기반한 새로운 클래스들을 만드는 것은, 프로젝트 전체에서 일관된 look and feel (모양과 느낌) 을 만들기 위한 방법으로 추천됩니다.
 
-## 하위 클래스화 하기 ##
+## 서브클래스화(상속) ##
 
-`ux:Class` 속성은 자체적으로 요소의 타입이 *기본 클래스(base class)* 인 새로운 Uno 클래스를 만듭니다. 이는 새로운 클래스가 하위 클래스로부터 모든 공용 속성들, 이벤트들 및 동작을 상속 받는 것을 의미합니다.
+`ux:Class` 속성 자체적으로 해당 요소의 타입이 *기본클래스(base class)* 인 새로운 Uno 클래스를 만듭니다. 이는 새로운 클래스가 서브클래스로부터 모든 공용 속성들, 이벤트들 및 동작을 상속 받는 것을 의미합니다.
 
 > UX 마크업에 대한 더 많은 정보는 [레퍼런스](https://www.fusetools.com/docs/ux-markup/ux-markup) 를 보십시오.
 
@@ -59,7 +59,7 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 
 ### 디펜던시 상속 ###
 
-여러분이 하위 클래스화 할때, 디펜던시들은 전달되지 않습니다. 따라서, 여러분이 하위 클래스화 하고 있는 기본클래스(baseclass)에 디펜던시들을 수동으로 전달해야 합니다.
+여러분이 서브클래스를 만들 때, 디펜던시들은 전달되지 않습니다. 그러므로, 서브클래스화(상속) 하고 있는 해당 기본클래스(baseclass)로 디펜던시들을 여러분이 수동으로 전달해야 합니다.
 
 ```
 <Page ux:Class="A">
@@ -87,8 +87,8 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 컴포넌트가 인스턴스화되면, 사용자는 초기 `BackgroundColor` 를 그대로 두거나, 새로 설정할 수 있습니다.
 
 ```
-<MyButton />  <!-- this one will keep the default color -->
-<MyButton BackgroundColor="#0f0" /> <!-- this one will use green instead -->
+<MyButton />  <!-- 이것은 초기값을 유지합니다. -->
+<MyButton BackgroundColor="#0f0" /> <!-- 이것은 속성값으로 green 을 사용합니다. -->
 ```  
 
 `<Change>` 애니메이터를 사용함으로써, 속성을 애니메이션으로 만들 수도 있습니다.
@@ -122,9 +122,9 @@ Fuse는 몇 가지 이유로 앱을 컴포넌트 (클래스)로 분리하도록 
 </Panel>
 ```
 
-## 속성을 통한 observables 전달 ##
+## 속성을 통한 observable 전달 ##
 
-Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 될 수 있습니다. 우리는 `object` 속성을 만들어, Observables 를 받아 들이는 속성을 추가 할 수 있습니다 :
+Observable 들은 또한 속성들을 사용하는 커스텀 컴포넌트들로 전달 될 수 있습니다. 우리는 `object` 속성을 만들어, Observable 들을 받아 들이는 속성을 추가할 수 있습니다 :
 
 ```
 <Panel ux:Class="CoolPanel">
@@ -142,7 +142,7 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 <CoolPanel ObservableProperty="{valueToPass}" />
 ```
 
-대부분의 경우 속성들을 통해 전달 받은 Observable 을 가져올 때, `inner()` 를 사용하고자 할 것입니다. 이는 `Propertyname` 이 무엇을 포함하던 간에 자바스크립트 값 `this.Propertyname` 은 하나의 observable 이기 때문입니다. 우리가 Observable을 하나 전달하면, `this.Propertyname` 은 우리가 전달했던 그 observable 인 observable 하나를 포함 할 것입니다.
+대부분의 경우 속성들을 통해 전달 받은 Observable 을 가져올 때, `inner()` 를 사용하고자 할 것입니다. 이는 자바스크립트 `this.Propertyname` 값이 `Propertyname` 이 뭘 포함하던 상관없이 하나의 observable 이기 때문입니다. 우리가 Observable을 하나 전달하면, `this.Propertyname` 은 우리가 전달했던 그 observable 인 observable 을 하나 포함 할 것입니다.
  
 ## 속성을 통한 파일 참조 전달 ##
 
@@ -167,9 +167,9 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 
 ## 템플릿 (ux:Template) ##
 
-템플릿들은 외형에 사용되는 커스텀 요소들을 가져와 컴포넌트의 커스터마이징을 향상시키기 위해 사용됩니다. 예를 들어, [PageIndicator](https://www.fusetools.com/docs/fuse/controls/pageindicator) 요소는 `PageControl` 의 각 페이지에 대한 템플릿에서 요소를 생성합니다. 요소는 `ux:Template` 속성을 해당 템플릿을 식별할 키로 설정하여 템플릿으로 만듭니다. 이 키는 사용 할 템플릿을 찾을 때 템플릿을 자식요소로 허용하는 요소들에 사용됩니다.
+템플릿들은 외형에 사용되는 커스텀 요소들을 가져와 컴포넌트의 커스터마이징을 향상시키기 위해 사용됩니다. 예를 들어, [PageIndicator](https://www.fusetools.com/docs/fuse/controls/pageindicator) 요소는 `PageControl` 각 페이지에 대한 템플릿에서 요소를 생성합니다. 요소는 `ux:Template` 속성을 해당 템플릿을 식별할 키로 설정하여 템플릿으로 만듭니다. 이 키는 사용 할 템플릿을 찾을때 템플릿을 자식요소로 허용하는 요소들에 사용됩니다.
 
-템플릿은 `Each` 를 사용하여 그려집니다. `Each` 는 `TemplateSource` 라는 속성을 가지고 있습니다. 이 속성은 `Each` 가 템플릿을 가져 오는 요소를 지정합니다. 앞서 언급했듯이, 템플릿은 키를 사용하여 자신을 식별합니다. 가능하면 해당 `TemplateKey` 속성은 `Each` 가 사용 해야 하는 템플릿이 어떤 것인지를 지정합니다.
+템플릿은 `Each` 를 사용하여 그려집니다. `Each` 는 `Each` 가 템플릿을 얻은 것으로부터 요소를 지정하는 `TemplateSource` 라는 속성을 가지고 있습니다. 앞서 언급했듯이, 템플릿은 키를 사용하여 자신을 식별합니다. 해당 `TemplateKey` 속성은 `Each` 가 사용해야 하는 템플릿이 어떤 것인지를 지정합니다.
 
 `Each` 는 부모 클래스 (`CoolRepeater`) 에서 키를 찾아야 하기 때문에, `TemplateSource="this"` 를 설정합니다.:
 
@@ -181,7 +181,7 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 </StackPanel>
 ```
 
-이 템플릿은 20번 반복 되는 템플릿을 허용하는 커스텀 컴포넌트 입니다. 템플릿이 주어지지 않으면, `Each` 안에 무엇이 있던 간에 `Each`는 기본 템플릿으로 대체될 것입니다. 그런 다음 커스텀 컴포넌트를 다음과 같이 사용할 수 있습니다.
+이 템플릿은 20번 반복 되는 템플릿을 허용하는 커스텀 컴포넌트 입니다. 템플릿이 주어지지 않으면, `Each` 안에 무엇이 있던 간에 `Each`는 기본 템플릿으로 대체될 것입니다. 커스텀 컴포넌트를 다음과 같이 사용할 수 있습니다.
 
 ```
 <CoolRepeater>
@@ -191,9 +191,9 @@ Observables 는 속성들을 사용하여 커스텀 컴포넌트들로 전달 �
 
 ## 이벤트 (UserEvent) ##
 
-우리 컴포넌트가 메시지를 외부 세계로 전달하기 원하는 경우가 많습니다. 이를 위해 UX 및 JavaScript 에서 우리가 이벤트를 발생시키고 처리 할 수 있도록 하는 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 사용할 수 있습니다.
+우리 컴포넌트가 메시지를 외부 세계로 전달하기를 원하는 경우가 많습니다. 이를 위해 UX 및 JavaScript 에서 우리가 이벤트를 발생시키고 처리 할 수 있도록 하는 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 사용할 수 있습니다.
 
-우리는 특정 이벤트를 발생시킬 수 있음을 나타내기 위해, 컴포넌트 클래스의 루트에 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 두었습니다. 우리가 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 배치하는 위치는 그것이 붙어있는 해당 노드와 그 자식요소만 이벤트를 발생시키거나 처리 할 수 ​​있기 때문에 중요합니다.
+우리는 특정 이벤트를 발생시킬 수 있음을 나타내기 위해, 컴포넌트 클래스의 루트에 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 두었습니다. 우리가 [UserEvent](https://www.fusetools.com/docs/fuse/userevent) 를 배치하는 위치는 중요합니다, 왜냐하면 그것이 붙어있는 해당 노드와 그 자식요소만 이벤트를 발생시키거나 처리 할 수 ​​있기 때문입니다.
 
 ```
 <Panel ux:Class="MyComponent">

@@ -12,7 +12,7 @@
 
 ## [App](https://www.fusetools.com/docs/fuse/app) 태그 ##
 
-App 태그는 응용 프로그램 트리의 루트입니다. 프로젝트의 UX 마크 업 파일 중 하나에 [App](https://www.fusetools.com/docs/fuse/app) 태그가 있으면, 프로젝트가 컴포넌트 라이브러리가 아닌 하나의 앱임을 나타냅니다.
+App 태그는 응용 프로그램 트리의 루트입니다. 프로젝트의 UX 마크업 파일들 중 하나에 [App](https://www.fusetools.com/docs/fuse/app) 태그가 있으면, 프로젝트가 컴포넌트들의 라이브러리가 아닌 하나의 앱임을 나타냅니다.
 
 Fuse는 자동으로 프로젝트의 [App](https://www.fusetools.com/docs/fuse/app) 태그를 찾아, 이를 루트 컴포넌트로 사용합니다. 프로젝트에는 하나의 [App](https://www.fusetools.com/docs/fuse/app) 태그만 있을 수 있습니다.
 
@@ -24,9 +24,9 @@ Fuse는 자동으로 프로젝트의 [App](https://www.fusetools.com/docs/fuse/a
 
 ## 컴포넌트 ##
 
-Fuse 에서 하나의 앱은 단순히 UX 마크업 컴포넌트의 트리입니다. (Uno 클래스의 인스턴스)
+Fuse 에서 하나의 앱은 단순히 UX 마크업 컴포넌트들의 트리 하나 입니다. (Uno 클래스의 인스턴스)
 
-기본 빌딩 블록들은 [Text](https://www.fusetools.com/docs/fuse/controls/text), [Rectangle](https://www.fusetools.com/docs/fuse/controls/rectangle), [Video](https://www.fusetools.com/docs/fuse/controls/video), [Slider](https://www.fusetools.com/docs/fuse/controls/slider) 또는 [MapView](https://www.fusetools.com/docs/fuse/controls/mapview) 와 같은 기본 요소들 입니다. [StackPanel](https://www.fusetools.com/docs/fuse/controls/stackpanel) 및 [Grid](https://www.fusetools.com/docs/fuse/controls/grid) 와 같은 계층적 레이아웃을 위해서는, [Panel](https://www.fusetools.com/docs/fuse/controls/panel) 을 사용하여 구성 할 수 있습니다.
+기본 빌딩 블록들은 [Text](https://www.fusetools.com/docs/fuse/controls/text), [Rectangle](https://www.fusetools.com/docs/fuse/controls/rectangle), [Video](https://www.fusetools.com/docs/fuse/controls/video), [Slider](https://www.fusetools.com/docs/fuse/controls/slider) 또는 [MapView](https://www.fusetools.com/docs/fuse/controls/mapview) 와 같은 원시요소들 (primitives) 입니다. 이것들은 [StackPanel](https://www.fusetools.com/docs/fuse/controls/stackpanel) 및 [Grid](https://www.fusetools.com/docs/fuse/controls/grid) 와 같은 계층적 레이아웃을 위한 [Panel](https://www.fusetools.com/docs/fuse/controls/panel) 들을 사용하여 구성 될 수 있습니다.
 
 ```
 <App>
@@ -84,7 +84,7 @@ UX 마크업은 기존 컴포넌트들을 결합하여 새로운 고급 컴포�
 
 ### 스타일링 ###
 
-여러분 앱 전체에 일관된 look and feel (모양과 느낌)을 만들기 위해서, Fuse 는 기본 속성들 및 동작들을 할당하기 위한 원시 요소들의 하위 클래스들을 만드는 것을 필요로 합니다.
+여러분 앱 전체에 일관된 look and feel (모양과 느낌)을 만들기 위해서, Fuse 는 기본 속성들 및 동작들을 할당하기 위한 원시요소들(primitives)의 서브클래스들을 만드는 것을 필요로 합니다.
 
 예를 들면, 고정된 텍스트 스타일을 제공하는 간단한 클래스(컴포넌트) 는 다음과 같습니다.
 
@@ -100,11 +100,11 @@ UX 마크업은 기존 컴포넌트들을 결합하여 새로운 고급 컴포�
 <HeaderText>This is a header</HeaderText>
 ```
 
-Fuse 는 어떤 CSS 와 비슷한 걸 가지고 있지 *않고*, 구조로부터 스타일을 분리 하려는 어떤 시도도 하지 않습니다. 그러나 Fuse 는 비즈니스로직(예를 들면 자바스크립트에서 정의 되어진) 에서 시각적 user experience (UX 마크업에 정의된) 를 분리하기 위한 많은 노력을 기울이고 있습니다.
+Fuse 는 CSS 와 비슷한 것을 가지고 있지 *않고*, 구조로부터 스타일을 분리 하려는 시도도 하지 않습니다. 그러나 Fuse 는 비즈니스로직(예를 들면 자바스크립트에서 정의 되어진) 에서 시각적 user experience (UX 마크업에 정의된) 를 분리하기 위한 많은 노력을 기울이고 있습니다.
 
 ### 재사용 가능 컴포넌트 ###
 
-하위 클래스화의 또 다른 중요한 사용 예는 선택적으로 내부 로직, 공용 속성들 및 이벤트들을 사용해 재사용 가능 컴포넌트들을 만드는 것입니다.
+서브클래스화(상속) 의 또 다른 중요한 사용 예는 선택적으로 내부 로직, 공용 속성들 및 이벤트들을 사용해 재사용 가능 컴포넌트들을 만드는 것입니다.
 
 또 다른 예로, 여기 간단한 커스텀 버튼 컴포넌트가 있습니다:
 
@@ -116,7 +116,7 @@ Fuse 는 어떤 CSS 와 비슷한 걸 가지고 있지 *않고*, 구조로부터
 </Panel>
 ```
 
-여느 다른 컴포넌트 처럼 프로젝트의 어느 위치에서도 사용할 수 있습니다.
+여느 다른 컴포넌트처럼 프로젝트의 어느 위치에서도 사용할 수 있습니다.
 
 ```
 <MyButton Text="Submit" Clicked="{doSomething}" />
@@ -159,9 +159,9 @@ Fuse 앱의 네비게이션은 일반적으로 [App](https://www.fusetools.com/d
 
 ## 여러 UX 파일들로 분리 ##
 
-프로젝트가 성장함에 따라, 우리는 보통 앱을 여러 UX 마크업 파일로 분할하길 원합니다. Fuse에서 UX 마크업을 분리하는 것은 모든 컴포넌트를 루트 노드로 여러분이 원하는 트리의 모든 레벨에서 수행 될 수 있습니다. 그러나 자연스럽고 추천할만한 것은 *page* 별로 나누는 것입니다.
+프로젝트가 성장함에 따라, 우리는 보통 앱을 여러 UX 마크업 파일들로 분리하길 원합니다. Fuse에서 UX 마크업을 분리하는 것은 루트 노드처럼 모든 컴포넌트에서 여러분이 원하는 트리의 모든 레벨에서 할 수 있습니다. 그러나 자연스럽고 추천할만한 것은 *page* 별로 나누는 것입니다.
 
-위의 예는, 각 `Page` 태그들을 적절한 이름의 개별 UX 파일로 옮기는 것을 의미합니다. 우리가 이렇게 할 수 있는 두 가지 방법이 있습니다 :
+위의 예제를 예로들면, 이것은 각 `Page` 태그들을 적절한 이름의 개별 UX 파일로 옮기는 것을 의미합니다. 우리가 이렇게 할 수 있는 두 가지 방법이 있습니다 :
 
 ### ux:Include 사용 - 단순하게 코드를 포함 ###
 
@@ -188,9 +188,9 @@ Fuse 앱의 네비게이션은 일반적으로 [App](https://www.fusetools.com/d
 </App>
 ```
 
-이것은 우리에게 여러 가지 텍스트 파일들로 작업 할 수 있도록 하면서, 동일한 행동을 제공합니다.
+이것은 우리에게 여러가지 텍스트 파일들로 작업할 수 있도록 하면서, 동일한 동작을 제공합니다.
 
-> 정확히 동일한 기술은 `ux:Name` 대신 `ux:Template` 속성이 있는 페이지 템플릿에 사용할 수 있습니다.
+> 정확히 동일한 테크닉은 `ux:Name` 대신 `ux:Template` 속성이 있는 페이지 템플릿들에 대해 사용될 수 있습니다.
 
 ### ux:Class 사용 - 페이지를 하나의 컴포넌트로 전환 ###
 
@@ -222,6 +222,6 @@ UX 마크업 요소들의 트리를 추출하는 보다 강력한 방법은, 독
 </App>
 ```
 
-이렇게 하면 다른 컨텍스트들에서 재사용 될 수 있는 페이지 컴포넌트들을 허용하는 동시에, 동일한 동작을 얻을 수 있습니다. 컴포넌트를 다른 곳에서 재사용 할 수 있도록 하기 위한 유일한 요구사항은 우리가 디펜던시들을 제공하는 것입니다. (예: `Router` )
+이렇게 하면 다른 컨텍스트들에서 재사용 될 수 있는 페이지 컴포넌트들을 허용하면서, 동일한 동작을 얻을 수 있습니다. 컴포넌트를 다른 곳에서 재사용 할 수 있도록 하기 위한 유일한 요구사항은 우리가 디펜던시들을 제공하는 것입니다. (예: `Router` )
 
 > 이 토픽에 대한 자세한 내용은 [컴포넌트 만들기](https://www.fusetools.com/docs/basics/creating-components) 문서를 참조하십시오.
