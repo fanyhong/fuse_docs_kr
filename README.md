@@ -34,9 +34,17 @@
     * [스플래시 화면](b_Tutorial/07_Splash_screen.md)
     * [결론](b_Tutorial/08_Final_thoughts.md)
 
+
+* [[ 전체 레퍼런스 ]](c_Full_Reference/00_Full_Reference.md)
+    * [UX 클래스 레퍼런스](c_Full_Reference/01_UX_Class_Reference.md)
+    * [Uno 프로젝트 (.unoproj) 레퍼런스](c_Full_Reference/02_Uno_projects_(.unoproj)_Reference.md)
+
+
 # 진행 상황 #
 
 - 20170121 : [ Fuse 기본 사항 ], [ 튜토리얼 ] 번역
+- 20170208 : [ 전체 레퍼런스 ] 번역
+
 
 
 
