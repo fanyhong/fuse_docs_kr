@@ -37,7 +37,7 @@
 
 * [[ 전체 레퍼런스 ]](c_Full_Reference/00_Full_Reference.md)
     * [UX 클래스 레퍼런스](c_Full_Reference/01_UX_Class_Reference.md)
-    * [Uno 프로젝트 (.unoproj) 레퍼런스](c_Full_Reference/02_Uno_projects_(.unoproj)_Reference.md)
+    * [Uno 프로젝트 (.unoproj) 레퍼런스](c_Full_Reference/02_Uno_projects_Reference.md)
 
 
 # 진행 상황 #
