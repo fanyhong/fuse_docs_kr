@@ -6,7 +6,7 @@ UX 마크업은 모든 오브젝트의 속성에서 사용할 수 있는 간단�
 
 > UX 표현식(expressions) 는 시험적인 기능으로 변경될 수 있습니다. UX 마크 업에서 이것을 사용한다면, 업데이트 할 때 changelog 를 잘 살펴보십시오. Uno 에서 이 기능을 사용할 예정이라면, 몇 가지 큰 API 변경이 계획 되어 있다는 것을 알아 두십시오.
 
-## 빠른 요약 ##
+## 요약 ##
 
 UX Markup 의 *Reactive Expressions(반응형 표현식들)* 은 여러분이 *리터럴(literals)* , *자원(resources)* 및 지원되는 모든 *바인딩들(bindings)* 을 표현식(expressions)에 결합할 수 있게 합니다. 이런 표현식(expressions)들은 *바인딩(bindings)* 들이 새 값을 생성하는 경우 푸시 기반으로 자동 업데이트됩니다.
 
@@ -27,7 +27,7 @@ spring({Property slider.Value})*30% + 50%
 
 ## 바인딩 (Bindings) ##
 
-바인딩은 환경의 변화를 감지하고, UX 표현식(expression)에 영향을주는 새로운 값을 생성하는 객체입니다. 모든 바인딩 타입들은 표현식들의 일부로 사용될 수 있습니다.
+바인딩은 환경의 변화를 감지하고, UX 표현식(expression)에 영향을주는 새로운 값을 생성하는 오브젝트입니다. 모든 바인딩 타입들은 표현식들의 일부로 사용될 수 있습니다.
 
 - 데이터 바인딩 ( `{path.to.data}` )
 - 속성 바인딩 ( `{Property someObject.SomeProperty}` 또는 `{Property SomeProperty}` )
