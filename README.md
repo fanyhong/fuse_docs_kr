@@ -45,6 +45,8 @@
     * [표현식 (Expressions)](d_UX_Markup/02_Expressions.md)
     * [이름 (Names)](d_UX_Markup/03_Names_uxName.md)
     * [클래스 (Classes)](d_UX_Markup/04_Classes_uxClass.md)
+    * [디펜던시 (Dependencies)](d_UX_Markup/05_Dependencies_uxDepecdency.md)
+    * [속성 (Properties)](d_UX_Markup/06_Properties_uxProperty.md)
     
 
 # 진행 상황 #

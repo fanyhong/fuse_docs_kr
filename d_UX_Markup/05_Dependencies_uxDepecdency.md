@@ -1,69 +1,81 @@
 원본: https://www.fusetools.com/docs/ux-markup/dependencies
 
-종속성 (ux : Dependency)
+# 디펜던시 (ux:Dependency) #
 
-UX Markup의 ux : Dependency 속성은 생성 가능한 ux : Class를 포함하는 새로운 하드 종속성 (Uno 생성자 인수)을 정의합니다.
+UX 마크업의 `ux:Dependency` 속성은 이를 포함하는 `ux:Class` 가 생성 가능하도록 하기위해 필요로 하는 새 디펜던시(Uno 생성자 인수)를 정의합니다.
 
-통사론
+## 구문 (Syntax) ##
 
-<type ux : Dependency = "dependency_name"/>
-여기서 type은 UX 마크 업에서 액세스 할 수있는 모든 유형이며 depdendency_name은 유효한 Uno 식별자입니다.
+```
+<type ux:Dependency="dependency_name" />
+```
 
-비고
+여기서 `type` 은 UX 마크 업에서 액세스 할 수 있는 모든 타입이며, `depdendency_name` 은 유효한 Uno 식별자입니다.
 
-구성 요소 (ux : Class로 정의 됨)는 작업 환경에서 특정 객체 나 서비스에 대한 액세스가 필요할 수 있습니다. 예를 들어, 구성 요소가 App의 라우터에 액세스해야 할 수 있습니다.
+## 비고 (Remarks) ##
 
-다음과 같이 ux : Dependency 속성을 사용하여 구성 요소에 종속성을 선언 할 수 있습니다.
+컴포넌트( `ux:Class` 로 정의 됨)들은 종종 작업 환경에서 특정 오브젝트들 이나 서비스들에 대한 액세스를 필요로 합니다. 예를 들어, 컴포넌트가 [App](https://www.fusetools.com/docs/fuse/app) 의 [라우터](https://www.fusetools.com/docs/fuse/navigation/router) 에 액세스 해야 할 수 있습니다.
 
-<Panel ux : Class = "MyBackButton">
-    <라우터 ux : 종속성 = "라우터"/>
-    <Panel ux : Dependency = "panel"/>
+다음과 같이 `ux:Dependency` 속성을 사용하여 컴포넌트에 디펜던시를 선언 할 수 있습니다.
 
-    <자바 스크립트>
-        function clicked () {
-            router.goBack ();
-        }
+```
+<Panel ux:Class="MyBackButton">
+    <Router ux:Dependency="router" />
+    <Panel ux:Dependency="panel" />
 
-        module.exports = {클릭 된 : 클릭};
-    <자바 스크립트>
+    <JavaScript>
+        function clicked() {
+            router.goBack();
+        }
 
-    <클릭>
-        <콜백 핸들러 = "{clicked}">
-    </ Clicked>
+        module.exports = { clicked: clicked };
+    <JavaScript>
 
-    <잠시 후>
-        <패널 변경 .Opacity = "0.5"Duration = "0.3"/>
-    </ WhilePressed>
-</ Panel>
-위의 예는 router와 panel의 두 종속 관계를 선언합니다. 구성 요소를 클릭하면 라우터가 .goBack ()에 사용됩니다. 패널을 더빙 한 패널은 구성 요소를 누른 상태에서 반투명으로 사라집니다.
+    <Clicked>
+        <Callback Handler="{clicked}">
+    </Clicked>
 
-종속성은 Uno의 생성자 인수와 동일하며 읽기 전용 필드에 저장됩니다. 이것은 객체가 초기화시에 항상 알려지며 절대로 변경되지 않기 때문에, 우리는 JavaScript 나 애니메이터에서 객체를 해당 이름으로 Change와 같이 안전하게 사용할 수 있음을 의미합니다.
+    <WhilePressed>
+        <Change panel.Opacity="0.5" Duration="0.3" />
+    </WhilePressed>
+</Panel>
+```
 
-종속성이있는 구성 요소를 인스턴스화 할 때 각 종속성 (즉, 종속성 주입)에 대해 객체를 제공해야합니다. 그렇지 않으면 컴파일 시간 오류가 생성됩니다.
+위는 `router` 와 `panel`, 두 디펜던시들을 선언하는 예제 입니다. 컴포넌트가 클릭되면 `router` 는 `.goBack()` 을 위해 사용될 것입니다. 패널을 더빙한 `panel` 은 컴포넌트를 누른 상태에서 반투명으로 페이드(fade) 될 것입니다.
 
+디펜던시들은 Uno의 생성자 인수와 동일하며, `readonly` 필드들에 저장됩니다. 이것은 오브젝트가 초기화시에 항상 알려지며 절대로 변경되지 않기 때문에, 우리는 [JavaScript](https://www.fusetools.com/docs/fuse/reactive/javascript) 나 애니메이터들에서 `Change` 같이 주어진 이름으로 직접 안전하게 사용할 수 있음을 의미합니다.
+
+디펜던시들이 있는 컴포넌트를 인스턴스화 할 때 각 디펜던시에 대해 객체를 제공(즉, 디펜던시 주입) 해야 합니다. 그렇지 않으면 컴파일 타임에 오류가 생성됩니다.
+
+```
 <App>
-    <라우터 ux : Name = "라우터"/>
-    <패널 ux : Name = "p1"/>
-    <MyBackButton router = "router"panel = "p1"/>
-</ App>
-구성 요소는 종속성에 대한 기본값을 제공 할 수 없습니다.
+    <Router ux:Name="router" />
+    <Panel ux:Name="p1" />
+    <MyBackButton router="router" panel="p1" />
+</App>
+```
 
-종속성 상속
+컴포넌트는 디펜던시들에 대한 기본값(default value)을 제공 할 수 없습니다.
 
-하위 클래스를 만들 때 종속성은 전달되지 않습니다. 따라서 서브 클래 싱하는베이스 클래스로 수동으로 전달해야합니다.
+## 디펜던시 상속 ##
 
-<Page ux : Class = "A">
-    <라우터 ux : 종속성 = "라우터"/>
-</ Page>
+서브클래스(subclass)를 만들때 디펜던시는 전달되지 않습니다. 따라서 서브클래싱(subclassing) 하고 있는 기본 클래스(baseclass)에 수동으로 전달해야 합니다.
+
+```
+<Page ux:Class="A">
+    <Router ux:Dependency="router" />
+</Page>
 <A ux:Class="B">
-    <라우터 ux : 종속성 = "라우터"ux : 바인딩 = "라우터"/>
+    <Router ux:Dependency="router" ux:Binding="router" />
 </A>
-ux는 어떻습니까? ux : Dependency는 Property와 다릅니다.
+```
 
-종속성은 속성과 비슷하게 작동하지만 몇 가지 주요 차이점이 있습니다.
+## ux:Dependency 는 ux:Property 와 어떻게 다릅니까? ##
 
-종속성은 변경할 수 없으므로 시간이 지남에 따라 값이 변하지 않습니다.
-종속성에는 인스턴스화시 값이 제공되어야합니다.
-종속성은 기본값을 가질 수 없습니다.
-종속성은 <JavaScript> 태그 (Observables가 아님)의 로컬 명명 된 객체 direclty로 사용할 수 있습니다.
-종속성은 클래스 범위에서 로컬 이름으로 사용할 수 있습니다. 즉, {Property foo}와 같은 바인딩을 사용하여 액세스하지 않아도되므로 foo를 사용하면됩니다.
+디펜던시들은 속성들과 비슷하게 작동하지만, 몇 가지 주요 차이점들이 있습니다.
+
+- 디펜던시들은 변경할 수 없으므로, 시간이 지남에 따라 값이 변하지 않습니다.
+- 디펜던시들은 인스턴스화 할 때 값이 제공되어야 합니다.
+- 디펜던시들은 기본값을 가질 수 없습니다.
+- 디펜던시들은 `<JavaScript>` 태그들에서 로컬 명명된 오브젝트들로써(Observables 아님) 직접적으로 사용할 수 있습니다.
+- 디펜던시들은 해당 클래스 범위(scope)에서 로컬 이름들로 사용할 수 있습니다. 즉, `{Property foo}` 와 같은 바인딩을 사용하여 액세스할 필요없이, 그냥 `foo` 를 사용하면 됩니다.
