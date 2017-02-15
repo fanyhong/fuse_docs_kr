@@ -116,7 +116,7 @@ UX 마크업의 `ux:Property` 속성은 이를 포함하는 `ux:Class` 에 새 �
 </Panel>
 ```
 
-### JavaScript 에서 속성(properties)들에 대한 이해에 대한 중요성 ###
+### JavaScript 에서 속성(properties)들에 대해 이해하기 위해 중요한 것들 ###
 
 JavaScript 코드가 백그라운드에서 실행되는 동안, 모든 UX 오브젝트들과 속성들은 UI 쓰레드에 존재함을 알고계십시오. 즉, **속성의 값은 여러분 JavaScript 코드가 실행중 일때 반드시 최신 상태는 아님을 의미합니다.** 이것은 혼란을 주는 일반적인 원인입니다.
 
@@ -144,4 +144,4 @@ Observables 역시 속성들을 사용하여 커스텀 컴포넌트들로 전달
 <CoolPanel ObservableProperty="{valueToPass}" />
 ```
 
-여러분은 거의 항상 속성들을 통해 전달된 observables 를 가져올때 `inner()` 를 사용하는 것에 관심이 있습니다. 이것은 javascript 값 `this.PropertyName` 이 `PropertyName` 이 포함한 것이 무엇이든 간에 하나의 observable 때문입니다. 우리가 하나의 Observable을 전달하면, `this.PropertyName` 은 우리가 전달했던 observable 인 observables 하나를 포함하게 됩니다.
+여러분은 거의 항상 속성들을 통해 전달된 observables 를 가져올때 `inner()` 를 사용하는 것에 관심이 있습니다. 이것은 javascript 값 `this.PropertyName` 이 `PropertyName` 이 포함한 것이 무엇이든 간에 하나의 observable 이기 때문입니다. 우리가 하나의 Observable을 전달하면, `this.PropertyName` 은 우리가 전달했던 observable 인 observable 하나를 포함하게 됩니다.
