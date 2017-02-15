@@ -43,8 +43,8 @@
 * [[ UX 마크업 ]](d_UX_Markup/00_UX_Markup.md)
     * [리터럴 (Literals)](d_UX_Markup/01_Literals.md)
     * [표현식 (Expressions)](d_UX_Markup/02_Expressions.md)
-    * [이름 (Names)](d_UX_Markup/03_Names_(uxName).md)
-    * [클래스 (Classes)](d_UX_Markup/04_Classes_(uxClass).md)
+    * [이름 (Names)](d_UX_Markup/03_Names_uxName.md)
+    * [클래스 (Classes)](d_UX_Markup/04_Classes_uxClass.md)
     
 
 # 진행 상황 #
