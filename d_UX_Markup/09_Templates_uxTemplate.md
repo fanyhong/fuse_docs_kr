@@ -1,49 +1,63 @@
 원본: https://www.fusetools.com/docs/ux-markup/templates
 
-템플릿 (ux : 템플릿)
+# 템플릿 (ux:Template) #
 
-UX Markup의 ux : Template 속성은 XML 요소에 배치 될 때 지정된 XML 요소와 전체 하위 트리가 템플리트 (Uno.UX.Template)임을 지정합니다. 템플릿은 런타임에 UX 마크 업 트리 복사본을 임의로 생성 할 수 있습니다.
+UX 마크업의 `ux:Template` 속성은 XML 요소에 놓일 때 해당 XML 요소와 전체 하위 트리가 템플릿( `Uno.UX.Template` ) 임을 지정합니다. 템플릿들은 런타임에 UX 마크업 트리의 복사본을 임의 수로 생성할 수 있습니다.
 
-통사론
+## 구문 (Syntax) ##
 
-<type ux : Template = "template_name"/>
-여기서 type은 유효한 UX 마크 업 유형이고 template_name은 유효한 Uno 식별자입니다.
+```
+<type ux:Template="template_name" />
+```
 
-비고
+여기서 `type` 은 UX 마크업에서 사용할 수 있는 모든 타입이 가능하며 `template_name` 은 유효한 Uno 식별자입니다.
 
-템플릿은 다음과 같은 몇 가지 상황에서 사용됩니다.
+## 비고 (Remarks) ##
 
-<Each> repeater 내부에서 컨텐츠 노드는 암시 적으로 템플릿입니다.
-<Navigator> 내에서 일반 노드 대신 페이지 템플리트를 제공하여 Navigator가 필요할 때마다 각 페이지 템플리트의 새 사본을 작성할 수 있습니다.
-ux : 템플릿 인스턴스의 이름
+템플릿들은 다음과 같은 몇 가지 상황에서 주로 사용됩니다.
 
-ux : Template로 표시된 노드 내부에서, 현재 템플리트의 현재 사본 (인스턴스)은 ux : Name을 사용하여 같은 방법으로 명명 된 것과 같은 방식으로 template_name에 의해 참조 될 수 있습니다.
+- `<Each>` 반복자(repeater) 내부에서 컨텐츠 노드들은 암시적으로 템플릿입니다.
+- page 템플릿들이 일반 노드들 대신 제공될 수 있는 `<Navigator>` 내에서 해당 `Navigator` 가 필요할 때마다 각 page 템플릿의 새 복사본들을 생성할 수 있도록 합니다.
 
-예를 들어, 포함 된 <JavaScript> 태그에서 템플릿 인스턴스를 이름으로 참조 할 수 있습니다.
+## 템플릿 인스턴스의 ux:Name ##
 
-<Page ux : Template = "homePage">
-    <자바 스크립트>
-        homePage.Parameter.onValueChanged (module, function () {...
-또한 일반적으로 UX 마크 업에서 표현식에 페이지 이름을 사용할 수 있습니다.
+`ux:Template` 로 표시된 노드 내부에서, 현재 템플릿의 현재 복사본(인스턴스)들은 `ux:Name` 을 사용하여 같은 방법으로 명명되었던 것과 같은 방식으로 `template_name` 에 의해 참조될 수 있습니다.
 
-<Page ux : Template = "homePage">
-    <Rectangle LayoutMaster = "homePage"... />
-구성 요소 사용자 정의 가능성을 위해 템플릿 사용
+예를 들면, 포함한 `<JavaScript>` 태그에서 우리는 이름으로 템플릿 인스턴스를 참조할 수 있습니다.
 
-템플릿을 사용하여 모양에 사용되는 사용자 정의 요소를 가져 와서 구성 요소의 사용자 정의 가능성을 높일 수 있습니다. 예를 들어 PageIndicator 요소는 PageControl의 각 페이지에 대한 템플릿에서 요소를 생성합니다. 요소는 ux : Template 속성을 해당 템플릿을 식별 할 키로 설정하여 템플릿으로 만듭니다. 이 키는 적절한 템플릿을 찾을 때 템플릿 수용 요소가 사용합니다.
+```
+<Page ux:Template="homePage">
+    <JavaScript>
+        homePage.Parameter.onValueChanged(module, function() { ...
+```
 
-템플릿은 각각을 사용하여 그려집니다. 각각은 TemplateSource라는 속성을 가지고 있는데, 이는 Each가 템플릿을 가져 오는 요소를 지정합니다. 앞서 언급했듯이 템플릿은 키를 사용하여 자신을 식별합니다. 키 각 키는 TemplateKey 속성을 사용하여 지정된 템플릿을 찾습니다.
+또한, 일반적인 UX 마크업에서 표현식들(expressions)에 page 이름을 사용할 수 있습니다.
 
-일반적인 TemplateSource는 ux입니다 : 각각의 자식 인 Class :
+```
+<Page ux:Template="homePage">
+    <Rectangle LayoutMaster="homePage" ... />
+```
 
-<StackPanel ux : Class = "CoolRepeater"Background = "# FAD">
-    <각 TemplateSource = "이"TemplateKey = "항목"개수 = "20"/>
-        <텍스트> 기본 템플릿 </ Text>
-    </ 각>
-</ StackPanel>
-이 템플릿은 20 번 반복되는 템플릿을 허용하는 맞춤 구성 요소입니다. 템플릿이 제공되지 않으면 각 템플릿은 기본 템플릿으로 폴백됩니다. 그런 다음 사용자 지정 구성 요소를 다음과 같이 사용할 수 있습니다.
+## 커스텀화 컴포넌트를 위한 템플릿 사용 (Using templates for component customizability) ##
 
+템플릿들은 외형을 위해 사용되는 커스텀 요소들을 가져오도록 하여 컴포넌트의 커스텀화를 향상 시키는데 사용될 수 있습니다. 이런 예를 들면 `PageControl` 내 각 페이지에 대한 템플릿에서 요소를 생성하는 [PageIndicator](https://www.fusetools.com/docs/fuse/controls/pageindicator) 요소가 있습니다. 요소는 `ux:Template` 속성을 여러분이 원하는 해당 템플릿 식별 키로 설정함으로써 하나의 템플릿으로 만들어집니다. 이 키는 그리기에 적절한 템플릿들을 찾을 때 요소들을 받아들이는 템플릿에 의해 사용됩니다.
+
+템플릿은 `Each` 를 사용하여 그려집니다. `Each` 는 `Each` 가 해당 템플릿을 가져온 것으로부터 요소를 지정하는 `TemplateSource` 라는 속성을 가지고 있습니다. 앞서 언급했듯이 템플릿들은 키를 사용하여 자신들을 식별합니다. `Each` 키는 `TemplateKey` 속성을 사용하여 지정된 템플릿을 찾습니다.
+
+일반적으로 `TemplateSource` 는 `Each` 를 자식요소로 가지는 `ux:Class` 입니다.:
+
+```
+<StackPanel ux:Class="CoolRepeater" Background="#FAD">
+    <Each TemplateSource="this" TemplateKey="Item" Count="20" />
+        <Text>Default template</Text>
+    </Each>
+</StackPanel>
+```
+
+이것은 20번 반복하는 템플릿을 허용하는 커스텀 컴포넌트입니다. 템플릿이 주어지지 않으면, `Each` 안에 무엇이 있던간에 `Each` 템플릿은 기본 템플릿으로 대체(fallback) 됩니다. 커스텀 컴포넌트는 다음과 같이 사용될 수 있습니다.
+
+```
 <CoolRepeater>
-    <Text ux : Template = "Item"> 안녕하세요! </ Text>
-</ CoolRepeater>
-
+    <Text ux:Template="Item">Hello, world!</Text>
+</CoolRepeater>
+```
