@@ -28,10 +28,15 @@
 * [[ UX 마크업 ]](d_UX_Markup/00_UX_Markup.md)
     * [리터럴 (Literals)](d_UX_Markup/01_Literals.md)
     * [표현식 (Expressions)](d_UX_Markup/02_Expressions.md)
-    * [이름 (Names)](d_UX_Markup/03_Names_uxName.md)
-    * [클래스 (Classes)](d_UX_Markup/04_Classes_uxClass.md)
-    * [디펜던시 (Dependencies)](d_UX_Markup/05_Dependencies_uxDepecdency.md)
-    * [속성 (Properties)](d_UX_Markup/06_Properties_uxProperty.md)
+    * [이름 (Names - ux:Name)](d_UX_Markup/03_Names_uxName.md)
+    * [클래스 (Classes - ux:Classes)](d_UX_Markup/04_Classes_uxClass.md)
+    * [디펜던시 (Dependencies - ux:Depecdency)](d_UX_Markup/05_Dependencies_uxDepecdency.md)
+    * [속성 (Properties - ux:Property)](d_UX_Markup/06_Properties_uxProperty.md)
+    * [리소스 (Resources - ux:Key)](d_UX_Markup/07_Resources_uxKey.md)
+    * [전역 (Globals - ux:Global)](d_UX_Markup/08_Globals_uxGlobal.md)
+    * [템플릿 (Templates - ux:Template)](d_UX_Markup/09_Templates_uxTemplate.md)
+    * [바인딩 (Binding - ux:Binding & ux:AutoBind)](d_UX_Markup/10_Binding_uxBinding&uxAutoBind.md)
+        
 
 <!--
 
