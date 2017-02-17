@@ -21,11 +21,11 @@
     * [스플래시 화면](b_Tutorial/07_Splash_screen.md)
     * [결론](b_Tutorial/08_Final_thoughts.md)
 
-* [[ 전체 레퍼런스 ]](c_Full_Reference/00_Full_Reference.md)
+* [[ 전체 레퍼런스 (Full Reference) ]](c_Full_Reference/00_Full_Reference.md)
     * [UX 클래스 레퍼런스](c_Full_Reference/01_UX_Class_Reference.md)
     * [Uno 프로젝트 (.unoproj) 레퍼런스](c_Full_Reference/02_Uno_projects_Reference.md)
 
-* [[ UX 마크업 ]](d_UX_Markup/00_UX_Markup.md)
+* [[ UX 마크업 (UX Markup) ]](d_UX_Markup/00_UX_Markup.md)
     * [리터럴 (Literals)](d_UX_Markup/01_Literals.md)
     * [표현식 (Expressions)](d_UX_Markup/02_Expressions.md)
     * [이름 (Names - ux:Name)](d_UX_Markup/03_Names_uxName.md)
@@ -36,7 +36,10 @@
     * [전역 (Globals - ux:Global)](d_UX_Markup/08_Globals_uxGlobal.md)
     * [템플릿 (Templates - ux:Template)](d_UX_Markup/09_Templates_uxTemplate.md)
     * [바인딩 (Binding - ux:Binding & ux:AutoBind)](d_UX_Markup/10_Binding_uxBinding&uxAutoBind.md)
-        
+
+* [[ 기본 요소들 (Primitives) ]](e_Primitives/00_Primitives.md)
+
+
 
 <!--
 

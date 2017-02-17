@@ -51,6 +51,9 @@
     * [전역 (Globals - ux:Global)](d_UX_Markup/08_Globals_uxGlobal.md)
     * [템플릿 (Templates - ux:Template)](d_UX_Markup/09_Templates_uxTemplate.md)
     * [바인딩 (Binding - ux:Binding & ux:AutoBind)](d_UX_Markup/10_Binding_uxBinding&uxAutoBind.md)
+
+
+* [[ 기본 요소들 (Primitives) ]](e_Primitives/00_Primitives.md)
         
 
 # 진행 상황 #
