@@ -54,6 +54,7 @@
 
 
 * [[ 기본 요소들 (Primitives) ]](e_Primitives/00_Primitives.md)
+    * [텍스트 (Text)](e_Primitives/01_Text.md)
         
 
 # 진행 상황 #

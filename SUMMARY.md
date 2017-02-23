@@ -38,13 +38,11 @@
     * [바인딩 (Binding - ux:Binding & ux:AutoBind)](d_UX_Markup/10_Binding_uxBinding&uxAutoBind.md)
 
 * [[ 기본 요소들 (Primitives) ]](e_Primitives/00_Primitives.md)
+    * [텍스트 (Text)](e_Primitives/01_Text.md)
 
 
 
 <!--
-
-
-## Primitives
 
 ## 레이아웃
 
