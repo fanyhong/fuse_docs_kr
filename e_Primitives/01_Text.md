@@ -217,12 +217,12 @@ Fuse.Controls.Primitives 0.45.5
 | InvalidateRenderBounds | UNO | `RenderBounds` 가 변경되어 재계산될 필요가 있는 것을 나타냅니다. [더보기](https://www.fusetools.com/docs/fuse/visual/invalidaterenderbounds) |
 | InvalidateVisual | UNO | 이 노드의 비주얼이 변경된 것을 나타냅니다. 이를 통해 루트 수준 노드는 그려야 한다는 것을 알 수 있고 이 노드의 캐시를 무효화 해야하는 모든 캐싱을 허용합니다. |
 | InvalidateVisualComposition | UNO | 비주얼 구성이 변경되었지만 비주얼 도면 자체가 여전히 유효함을 나타냅니다 (예: 위치 변경). |
-| IsContextEnabled : bool | UNO | 이 노드가 사용 가능한 컨텍스트에 있는지 여부입니다. 조상 노드들 중 하나에서 [IsEnabled](https://www.fusetools.com/docs/fuse/visual/isenabled) 가 `false` 로 설정된 경우 컨텍스트가 비활성화됩니다. |
+| IsContextEnabled : bool | UNO | 이 노드가 사용 가능한 컨텍스트에 있는지 여부입니다. 상위 노드들 중 하나에서 [IsEnabled](https://www.fusetools.com/docs/fuse/visual/isenabled) 가 `false` 로 설정된 경우 컨텍스트가 비활성화됩니다. |
 | IsEnabled : bool | UX | 이 노드가 현재 상호 작용할 수 있는지 여부입니다. 비활성화된 비주얼은 입력 포커스를 받지 못합니다. 그러나, 그들은 여전히 ​​보이게될 수 있고 하위레이어 object에 대한 hit 테스트를 차단할 수 있습니다. |
 | IsInteracting : bool | UNO ||
-| IsLocalVisible : bool | UNO | 조상 비주얼이 숨겨져 있는지 또는 닫혀 있는지에 관계없이 이 비주얼을 볼 수 있는지 여부를 반환합니다. |
+| IsLocalVisible : bool | UNO | 상위 비주얼이 숨겨져 있는지 또는 닫혀 있는지에 관계없이 이 비주얼을 볼 수 있는지 여부를 반환합니다. |
 | IsMarginBoxDependent(Visual) : LayoutDependent | UNO ||
-| IsVisible : bool | UNO | 이 비주얼이 현재 표시되는지 여부를 반환합니다. 조상 비주얼들이 숨겨 지거나 없어지게 되면 false를 반환합니다. 비주얼이 다른 비주얼에 의해 가려 지거나 뷰 밖에 있지만 보이지 않는 이유로 이 속성을 사용하여 비주얼을 숨길지 여부를 확인하는데 이 속성이 사용되지는 않습니다 |
+| IsVisible : bool | UNO | 이 비주얼이 현재 표시되는지 여부를 반환합니다. 상위 비주얼들이 숨겨 지거나 없어지게 되면 false를 반환합니다. 비주얼이 다른 비주얼에 의해 가려 지거나 뷰 밖에 있지만 보이지 않는 이유로 이 속성을 사용하여 비주얼을 숨길지 여부를 확인하는데 이 속성이 사용되지는 않습니다 |
 | LastVisualChild : Visual | UNO ||
 | Layer : Layer | UX | 이 비주얼 요소의 레이어는 [부모(Parent)](https://www.fusetools.com/docs/fuse/node/parent) 컨테이너에 속합니다. |
 | LayoutRole : LayoutRole | UX | 이 비주얼이 레이아웃에 어떻게 참여 하는지를 설명합니다. |
@@ -249,7 +249,7 @@ Fuse.Controls.Primitives 0.45.5
 | onParameterChanged(callback) | JS | 라우팅 매개 변수가 변경 될 때마다 호출 할 함수를 등록합니다. [더보기](https://www.fusetools.com/docs/fuse/visual/onparameterchanged_84d6a67b) |
 | OnPropertyChanged(PropertyObject, Selector) | UNO ||
 | OnZOrderInvalidated | UNO ||
-| Parameter : string | UX | 이 비주얼이 JSON으로 인코딩된 매개 변수 데이터입니다. 이 비주얼이 네비게이션 페이지를 나타내는 경우 라우터에 의해 제공됩니다. [더보기](https://www.fusetools.com/docs/fuse/visual/parameter) |
+| Parameter : string | UX | 이 비주얼에 대한 JSON 인코딩된 매개 변수 데이터입니다. 이 비주얼이 네비게이션 페이지를 나타내는 경우 라우터에 의해 제공됩니다. [더보기](https://www.fusetools.com/docs/fuse/visual/parameter) |
 | PerformLayout | UNO ||
 | PerformLayout(float2) | UNO ||
 | PrependImplicitTransform(FastMatrix) | UNO ||
@@ -265,7 +265,7 @@ Fuse.Controls.Primitives 0.45.5
 | SnapDown(float2) : float2 | UNO ||
 | SnapToPixels : bool | UX | 이 비주얼의 레이아웃 결과를 물리적 디바이스 픽셀에 스냅할지 여부. |
 | SnapUp(float2) : float2 | UNO ||
-| Templates : IList of Template | UX | 이 Visual을 채우는 데 사용할 템플릿 목록입니다.  |
+| Templates : IList of Template | UX | 이 비주얼을 채우는데 사용할 템플릿 목록입니다.  |
 | TryParentToLocal(float2, float2) : bool | UNO | 좌표를 부모 공간에서 로컬 공간으로 변환합니다. |
 | ValidFrameCount : int | UNO ||
 | Viewport : IViewport | UNO ||
@@ -284,7 +284,7 @@ Fuse.Controls.Primitives 0.45.5
 | Add(Binding) | UNO ||
 | Bindings : IList of Binding | UX | 이 노드에 속하는 바인딩 목록입니다. |
 | ContextParent : Node | UNO | content parent는 이 노드의 semantic parent 입니다. DataContext, 네비게이션 또는 다른 semantic 항목을 찾는 것처럼 non-UI 구조가 해결되어야 하는 곳입니다. |
-| FindNodeByName(Selector, Predicate<Node> (Node)) : Node | UNO | 주어진 accepter 에 만족되는 특정 이름을 가지는 최초의 노드를 찾습니다. serach 알고리즘은 다음과 같이 작동합니다: 하위 트리의 노드가 먼저 일치하면 조상 노드들의 하위 트리들에 있는 노드들을 루트까지 끝까지 일치시킵니다. 일치하는 노드가 없으면 이 함수는 null을 반환합니다. |
+| FindNodeByName(Selector, Predicate<Node> (Node)) : Node | UNO | 주어진 accepter 에 만족되는 특정 이름을 가지는 최초의 노드를 찾습니다. serach 알고리즘은 다음과 같이 작동합니다: 하위 트리의 노드가 먼저 일치하면 상위 노드들의 하위 트리들에 있는 노드들을 루트까지 끝까지 일치시킵니다. 일치하는 노드가 없으면 이 함수는 null을 반환합니다. |
 | GetFirstData : object | UNO ||
 | Insert(int, Binding) | UNO ||
 | IsRootingCompleted : bool | UNO | 이 노드의 Rooting 이 완료되었는지 여부입니다. unrooting 이 시작되면 false를 반환합니다. |
