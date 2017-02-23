@@ -83,7 +83,7 @@ Fuse.Controls.Primitives 0.45.5
 | TextTruncation : TextTruncation | UX ||
 | TextWrapping : TextWrapping | UX | TextControl에서 텍스트를 래핑하는 방법을 지정합니다. |
 | Value : string | UX ||
-| ValueChanged : ValueChangedHandler<string> (object, ValueChangedArgs<string>) | UX | |
+| ValueChanged : ValueChangedHandler<string> (object, ValueChangedArgs<string>) | UX ||
 
 
 | Inherited from [LayoutControl](https://www.fusetools.com/docs/fuse/controls/layoutcontrol) | | |
@@ -110,7 +110,7 @@ Fuse.Controls.Primitives 0.45.5
 | NativeViewGroup : IViewGroup | UNO ||
 | PushPropertiesToNativeView | UNO ||
 | RootOnNativeParent | UNO ||
-| UpdateNativeSize(LayoutParams) | UNO | |
+| UpdateNativeSize(LayoutParams) | UNO ||
 
 
 | Inherited from [Element](https://www.fusetools.com/docs/fuse/elements/element) | | |
@@ -275,7 +275,7 @@ Fuse.Controls.Primitives 0.45.5
 | WorldTransform : float4x4 | UNO ||
 | WorldTransformInverse : float4x4 | UNO ||
 | ZOffset : float | UX | ZOffset을 지정하면 더 높은 값이 다른 노드 앞에 표시됩니다. `Panel` 과 같은 특정 노드에서만 사용됩니다. ZLayer는 우선 순위가 있고 ZOffset, ZOffsetNatural 순으로 정렬됩니다. |
-| ZOrderChildCount : int | UNO | |
+| ZOrderChildCount : int | UNO ||
 
 
 | Inherited from [Node](https://www.fusetools.com/docs/fuse/node) | | |
@@ -301,7 +301,7 @@ Fuse.Controls.Primitives 0.45.5
 | SubtreeToString : string | UNO ||
 | SubtreeToString(StringBuilder, int) | UNO ||
 | TryGetResource(string, Predicate<object> (object), object) : bool | UNO ||
-| VisitSubtree(Action<Node> (Node)) | UNO | |
+| VisitSubtree(Action<Node> (Node)) | UNO ||
 
 
 | Inherited from [PropertyObject](https://www.fusetools.com/docs/uno/ux/propertyobject) | | |
@@ -309,7 +309,7 @@ Fuse.Controls.Primitives 0.45.5
 | AddPropertyListener(IPropertyListener) | UNO ||
 | OnPropertyChanged(Selector, IPropertyListener) | UNO ||
 | OnPropertyChanged(Selector) | UNO ||
-| RemovePropertyListener(IPropertyListener) | UNO | |
+| RemovePropertyListener(IPropertyListener) | UNO ||
 
 
 | Inherited from [object](https://www.fusetools.com/docs/uno/object) | | |
@@ -317,7 +317,7 @@ Fuse.Controls.Primitives 0.45.5
 | Equals(object) : bool | UNO ||
 | GetHashCode : int | UNO ||
 | GetType : Type | UNO ||
-| ToString : string | UNO | |
+| ToString : string | UNO ||
 
 
 | Attached UX Attributes | | |
@@ -377,7 +377,7 @@ Fuse.Controls.Primitives 0.45.5
 | IList<Binding> | UNO ||
 | IScriptObject | UNO | 스크립트 엔진 표현을 가질 수있는 오브젝트들을 위한 인터페이스 |
 | ICollection<Binding> | UNO ||
-| IEnumerable<Binding> | UNO | |
+| IEnumerable<Binding> | UNO ||
 
 
 ## Remarks (비고) ##
