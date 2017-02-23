@@ -49,13 +49,13 @@ Fuse.Controls.Primitives 0.45.5
 
 ## Text 의 인터페이스 (Interface of Text) ##
 
-||||
+| | | |
 |---|---|---|
 | LoadAsync : bool | UX | 앱에 많은 텍스트가 있는 경우 이런 앱의 텍스트 요소들이 너무 많아 초기로드 시간이 오래걸려 눈에 띄는 딜레이 없이 작동되기 어려울 수 있는데, 이런 경우 유용할 수 있습니다. [더보기](https://www.fusetools.com/docs/fuse/controls/text/loadasync) |
 | Text Constructor | UNO | Creates a new Text |
 
 
-| Inherited from [TextControl](https://www.fusetools.com/docs/fuse/controls/textcontrol) |||
+| Inherited from [TextControl](https://www.fusetools.com/docs/fuse/controls/textcontrol) | | |
 |---|---|---|
 | Color : float4 | UX | 텍스트의 색 (TextColor 의 별칭) 입니다 |
 | Font : Font | UX ||
@@ -86,12 +86,12 @@ Fuse.Controls.Primitives 0.45.5
 | ValueChanged : ValueChangedHandler<string> (object, ValueChangedArgs<string>) | UX ||
 
 
-| Inherited from [LayoutControl](https://www.fusetools.com/docs/fuse/controls/layoutcontrol) |
+| Inherited from [LayoutControl](https://www.fusetools.com/docs/fuse/controls/layoutcontrol) | | |
 |---|---|---|
 | Layout : Layout | UX | 자식 요소들에게 적용되는 레이아웃입니다. [더보기](https://www.fusetools.com/docs/fuse/controls/layoutcontrol/layout) |
 
 
-| Inherited from [Control](https://www.fusetools.com/docs/fuse/controls/control) |||
+| Inherited from [Control](https://www.fusetools.com/docs/fuse/controls/control) | | |
 |---|---|---|
 | Background : Brush | UX | 이 컨트롤의 배경을 그리는데 사용될 브러시입니다. [더보기](https://www.fusetools.com/docs/fuse/controls/control/background) |
 | BootstrapNativeViewGroup : bool | UNO ||
@@ -113,7 +113,7 @@ Fuse.Controls.Primitives 0.45.5
 | UpdateNativeSize(LayoutParams) | UNO ||
 
 
-| Inherited from [Element](https://www.fusetools.com/docs/fuse/elements/element) |||
+| Inherited from [Element](https://www.fusetools.com/docs/fuse/elements/element) | | |
 |---|---|---|
 | ActualAnchor : float2 | UNO | 요소의 앵커(anchor) 입니다. [더보기](https://www.fusetools.com/docs/fuse/elements/element/actualanchor) |
 | ActualPosition : float2 | UNO | 요소의 위치, 부모의 왼쪽 상단 모서리에 대한 왼쪽 상단 모서리의 위치입니다. [더보기](https://www.fusetools.com/docs/fuse/elements/element/actualposition) |
@@ -168,7 +168,7 @@ Fuse.Controls.Primitives 0.45.5
 | Y : Size | UX | 요소의 Y 위치 [더보기](https://www.fusetools.com/docs/fuse/elements/element/y) |
 
 
-| Inherited from Visual |||
+| Inherited from Visual | | |
 |---|---|---|
 | _firstNonUnderlay : int | UNO ||
 | AbsoluteViewportOrigin : float2 | UNO | 뷰포트 (world) 공간에서 이 Visual의 원점을 반환합니다. [더보기](https://www.fusetools.com/docs/fuse/visual/absoluteviewportorigin) |
@@ -223,7 +223,7 @@ Fuse.Controls.Primitives 0.45.5
 | IsLocalVisible : bool | UNO | 조상 비주얼이 숨겨져 있는지 또는 닫혀 있는지에 관계없이 이 비주얼을 볼 수 있는지 여부를 반환합니다. |
 | IsMarginBoxDependent(Visual) : LayoutDependent | UNO ||
 | IsVisible : bool | UNO | 이 비주얼이 현재 표시되는지 여부를 반환합니다. 조상 비주얼들이 숨겨 지거나 없어지게 되면 false를 반환합니다. 비주얼이 다른 비주얼에 의해 가려 지거나 뷰 밖에 있지만 보이지 않는 이유로 이 속성을 사용하여 비주얼을 숨길지 여부를 확인하는데 이 속성이 사용되지는 않습니다 |
-| LastVisualChild : Visual | UNO |
+| LastVisualChild : Visual | UNO ||
 | Layer : Layer | UX | 이 비주얼 요소의 레이어는 [부모(Parent)](https://www.fusetools.com/docs/fuse/node/parent) 컨테이너에 속합니다. |
 | LayoutRole : LayoutRole | UX | 이 비주얼이 레이아웃에 어떻게 참여 하는지를 설명합니다. |
 | LocalBounds : Box | UNO ||
@@ -278,7 +278,7 @@ Fuse.Controls.Primitives 0.45.5
 | ZOrderChildCount : int | UNO ||
 
 
-| Inherited from [Node](https://www.fusetools.com/docs/fuse/node) |||
+| Inherited from [Node](https://www.fusetools.com/docs/fuse/node) | | |
 |---|---|---|
 | findData(symbol) | JS | 노드의 데이터 컨텍스트에서 주어진 심볼에 대한 데이터의 observable 을 반환합니다. [더보기](https://www.fusetools.com/docs/fuse/node/_finddata_b2ef1cd4) |
 | Add(Binding) | UNO ||
@@ -304,7 +304,7 @@ Fuse.Controls.Primitives 0.45.5
 | VisitSubtree(Action<Node> (Node)) | UNO | |
 
 
-| Inherited from [PropertyObject](https://www.fusetools.com/docs/uno/ux/propertyobject) |||
+| Inherited from [PropertyObject](https://www.fusetools.com/docs/uno/ux/propertyobject) | | |
 |---|---|---|
 | AddPropertyListener(IPropertyListener) | UNO ||
 | OnPropertyChanged(Selector, IPropertyListener) | UNO ||
@@ -312,7 +312,7 @@ Fuse.Controls.Primitives 0.45.5
 | RemovePropertyListener(IPropertyListener) | UNO | |
 
 
-| Inherited from [object](https://www.fusetools.com/docs/uno/object) |||
+| Inherited from [object](https://www.fusetools.com/docs/uno/object) | | |
 |---|---|---|
 | Equals(object) : bool | UNO ||
 | GetHashCode : int | UNO ||
@@ -320,7 +320,7 @@ Fuse.Controls.Primitives 0.45.5
 | ToString : string | UNO ||
 
 
-| Attached UX Attributes |||
+| Attached UX Attributes | | |
 |---|---|---|
 | ColorScheme (attached by Resources) : ColorScheme | UX ||
 | Dock (attached by DockPanel) : Dock | UX | [DockPanel](https://www.fusetools.com/docs/fuse/controls/dockpanel) 내부에서 요소가 도킹되는 방법을 지정합니다. |
@@ -362,7 +362,7 @@ Fuse.Controls.Primitives 0.45.5
 | GlobalKey (attached by Resource) : string | UX | `ux:Global` 속성은 UX 마크업 모든 곳에서 액세스 할 수있는 글로벌 리소스를 만듭니다. [더보기](https://www.fusetools.com/docs/uno/ux/resource/setglobalkey_4c3ac72d) |
 
 
-| Implemented Interfaces |||
+| Implemented Interfaces | | |
 |---|---|---|
 | IValue<string> | UNO ||
 | IShow | UNO ||
