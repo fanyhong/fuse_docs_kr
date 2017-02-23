@@ -12,7 +12,7 @@
 
 ## 노드들 (Nodes) ##
 
-||||
+| | | |
 | --- | --- | --- |
 | Activated | UX | page 가 활성화 될때마다 활성화됩니다. |
 | ActivatingAnimation | UX | 활성화될 요소의 애니메이션을 지정합니다. |
@@ -215,7 +215,7 @@
 
 ## 변형 (Transforms) ##
 
-||||
+| | | |
 | --- | --- | --- |
 | Rotation | UX | 요소를 지정된 각도만큼 회전합니다. |
 | Scaling | UX | 지정된 요건으로 요소를 확대하거나 축소합니다. |
@@ -228,7 +228,7 @@
 
 - [Font](https://www.fusetools.com/docs/fuse/font)
 
-||||
+| | | |
 | --- | --- | --- |
 | FileImageSource | UX | [Image](https://www.fusetools.com/docs/fuse/controls/image) 요소가 표시할 데이터 원본으로 이미지 파일을 지정합니다. |
 | HttpImageSource | UX | [Image](https://www.fusetools.com/docs/fuse/controls/image) 컨트롤로 표시할 수 있는 HTTP 를 통해 가져온 이미지를 제공합니다. |
